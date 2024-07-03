@@ -153,7 +153,7 @@ a, button {
     padding: 40px;
     position: static; /* La box ne bouge pas */
     overflow: auto; /* Permet le défilement si nécessaire */
-    background-image: url("/public/images/fond1.jpg");
+    background-image: url("/docs/images/fond1.jpg");
     background-size: cover;
     color: black;
     font-weight: bold;
