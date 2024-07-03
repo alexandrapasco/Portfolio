@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>Alexandra Pasco - Développeuse web</title>
     <link rel="icon" href="/docs/images/Logo-AP.png" />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="/docs/css/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Cabin+Sketch:wght@400;700&display=swap");
@@ -46,7 +46,7 @@
     </header>
 
     <main>
-      <h3>Hello World !</h3>
+      <h3 class="slideOutUp">Hello World !</h3>
 
       <section class="invader">
         <form class="configuration"></form>
@@ -78,8 +78,9 @@
           en autodidacte. Actuellement, je suis une formation bootcamp «
           Développeur Web et Web Mobile » en vu d'un diplôme de niveau 5 (bac
           +2) en téléprésentiel (798H) chez O'Clock et je suis à la recherche
-          d'un stage de 2 mois afin d'élargir mon cercle de compétences tout en
-          me construisant une première expérience professionnelle.<br /><br />
+          d'un stage de 2 mois (minimum) à 6 mois (idéalement) afin d'élargir
+          mon cercle de compétences tout en me construisant une première
+          expérience professionnelle.<br /><br />
 
           J'aime le travail en équipe, apprendre de nouvelles notions, relever
           des défis et j'aimerais mettre à profit ma créativité dans ce domaine.
@@ -112,7 +113,7 @@
       </div>
       <div class="buttons">
         <button class="button__see-cv">
-          <a href="cv.html" target="_blank">Voir mon CV</a>
+          <a href="/docs/html/cv.html" target="_blank">Voir mon CV</a>
         </button>
 
         <button class="button__upload-cv">
@@ -127,7 +128,11 @@
         <h4 class="title" id="contact">Contact</h4>
       </div>
       <div class="contact">
-        <form action="/page-traitement-donnees" method="post">
+        <form
+          action="MAILTO:sachapasco@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
           <div>
             <label for="nom">Votre nom</label>
             <input
@@ -154,11 +159,8 @@
               <option value="" disabled selected hidden>
                 Choisissez le sujet de votre message
               </option>
-              <option value="probleme-compte">Problème avec mon compte</option>
-              <option value="question-produit">
-                Question à propos d’un produit
-              </option>
-              <option value="suivi-commande">Suivi de ma commande</option>
+              <option value="probleme-compte">Proposition de stage</option>
+              <option value="question">Question à mon propos</option>
               <option value="autre">Autre...</option>
             </select>
           </div>
