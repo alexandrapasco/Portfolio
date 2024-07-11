@@ -17,7 +17,7 @@ a, button {
     text-decoration: none;
     color: white;
     font-size: 1rem;
-    cursor: pointer; /* Ne fonctionne pas ??? */
+    cursor: pointer; 
 }
 
 .title-container {
@@ -29,6 +29,7 @@ a, button {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 .title {
@@ -332,6 +333,7 @@ form button:hover {
     text-decoration: none;
     border: none;
     font-family: "Cabin Sketch", sans-serif;
+    font-size: 1rem;
     background-color: #BF94FF;
     border-radius: 2.5dvh;
     border: outset #55595E 5px;
@@ -342,7 +344,7 @@ form button:hover {
 
 .button__see-cv:hover {
     background-color: #670BAD;
-    border: intset #55595E 5px;
+    border: inset #55595E 5px;
 }
 
 .button__upload-cv {
