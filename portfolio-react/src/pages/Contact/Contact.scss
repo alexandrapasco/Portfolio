@@ -1,0 +1,82 @@
+.contact {
+    width: 90%;
+    border-radius: 8px;
+    padding: 0 20px;
+    background: white;
+    display: block;
+    margin: auto;
+    color: #303030;
+    box-shadow: 3px 3px 20px 18px rgba(0,0,0,0.25);
+}
+
+
+form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 83px;
+    margin-top: 25px;
+}
+        
+form div > label {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+        
+form div > input, form div > select, form div > textarea {
+    background-color: #DCD4E3;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.25);
+    font-family: 'Courier New', Courier, monospace;
+}
+        
+form div > input, form div > select {
+    height: 50px;
+    padding-left: 10px;
+}
+        
+form div > select {
+    appearance: none;
+    background-size: 15px;
+    background-image: url('data:image/svg+xml;base64,...'); /* Abbreviated for brevity */
+    background-position: right 10px top 50%;
+    background-repeat: no-repeat;
+}
+        
+form div > textarea {
+    height: 195px;
+    padding: 15px 10px 0 10px;
+}
+        
+form div > input::placeholder, form div > textarea::placeholder {
+    color: #303030;
+}
+        
+form div > select:invalid {
+    color: #303030;
+}
+        
+form div:last-child {
+    align-items: center;
+    margin-top: 20px;
+}
+        
+form button {
+    width: 100%;
+    max-width: 300px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 28px;
+    background: white;
+    border: rgba(48, 48, 48, 0.5) solid 1px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.25);
+    color: #303030;
+}
+
+form button:hover {
+    background: #DCD4E3;
+    cursor: pointer;
+}

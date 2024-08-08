@@ -1,0 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+    font-family: "Cabin Sketch", Calibri, 'Trebuchet MS', sans-serif;
+    color: #55595E;
+    box-sizing: border-box;
+    font-size: 2.4rem;
+    list-style-type: none;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #ede8f0;
+    width: 100%;
+    overflow-x: hidden; /* Empêche le débordement horizontal */
+}
+
+a, button {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer; 
+}
+
+* {
+  margin: 0;
+  list-style: none;
+}
+
+.title-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 3px 5px black;
+    border-bottom: solid 2px black;
+    padding: 10px;
+    font-weight: bold;
+}
