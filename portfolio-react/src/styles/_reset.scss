@@ -1,14 +1,9 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
 * {
     font-family: "Cabin Sketch", Calibri, 'Trebuchet MS', sans-serif;
     color: #55595E;
     box-sizing: border-box;
-    font-size: 2.4rem;
+    font-size: 1rem;
     list-style-type: none;
     scroll-behavior: smooth;
     margin: 0;
@@ -28,11 +23,6 @@ a, button {
     cursor: pointer; 
 }
 
-* {
-  margin: 0;
-  list-style: none;
-}
-
 .title-container {
     position: relative;
     width: 100%;
@@ -49,7 +39,6 @@ a, button {
     font-size: 2rem;
     color: white;
     text-shadow: 1px 3px 5px black;
-    border-bottom: solid 2px black;
     padding: 10px;
     font-weight: bold;
 }

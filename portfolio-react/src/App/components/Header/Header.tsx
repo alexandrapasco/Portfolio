@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.scss';
+import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <header>
+    <header className={menuOpen ? 'open' : ''}>
       <nav id="nav-menu">
         <nav className="nav__slogan">
           <a href="index.html"><h1 className="title__url">alexandrapasco.com</h1></a>
           <h2 className="title__slogan">Votre site selon vos envies</h2>
         </nav>
+
         <nav className="nav__logo">
           <div className="box-logo">
             <img id="logo" src="/src/assets/images/Logo-AP.png" alt="Logo du site" />
           </div>
         </nav>
-        <ul className="nav__list">
+
+        {/* Utiliser le composant BurgerMenu */}
+        <BurgerMenu isOpen={menuOpen} toggleMenu={toggleMenu} />
+
+        <ul className={`nav__list ${menuOpen ? 'open' : ''}`}>
           <li className="nav__item">
             <a href="#about" className="nav__link">À propos</a>
           </li>

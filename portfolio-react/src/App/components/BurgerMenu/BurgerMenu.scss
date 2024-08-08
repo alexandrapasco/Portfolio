@@ -1,0 +1,80 @@
+/* src/components/BurgerMenu.scss */
+
+/* Burger Icon */
+/* src/components/BurgerMenu.scss */
+
+/* Burger Icon */
+.burger {
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 10px; /* Décalage vers la gauche */
+    bottom: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+/* src/components/BurgerMenu.scss */
+
+/* Container for Burger Icon */
+.burger {
+    cursor: pointer;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style and transition for the icons */
+  .icon {
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transition sur la transformation et l'opacité */
+  }
+  
+  /* Transition lors de l'ouverture du menu */
+  .icon.open {
+    transform: rotate(90deg); /* Rotation lors de l'ouverture */
+  }
+  
+  .icon.closed {
+    transform: rotate(0deg); /* Retour à l'état initial */
+  }
+  
+  
+  /* Confine the nav__list inside the header */
+  @media screen and (max-width: 768px) {
+    .burger {
+      display: flex; /* Show burger on mobile */
+    }
+  
+    .nav__list {
+      display: none;
+    }
+  
+    /* Show the nav__list when the menu is open */
+    .nav__list.open {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: #fff;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      padding: 10px;
+      z-index: 5;
+    }
+  
+    /* Adjust header height when menu is open */
+    header.open {
+      margin-bottom: 250px; /* Ajuster la hauteur en fonction du contenu */
+    }
+  }
+  

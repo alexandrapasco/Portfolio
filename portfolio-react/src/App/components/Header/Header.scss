@@ -15,12 +15,11 @@
 }
 
 .nav__link {
-    font-size: 1.3rem;
     position: sticky;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10px;
+    padding: 0 5px;
     text-decoration: none;
     color: #55595E;
     flex: 1;
@@ -46,8 +45,8 @@
     flex-wrap: wrap;
     align-content: center;
     background-color: #fff;
-    gap: 20px;
-    padding: 20px 15px;
+    gap: 10px;
+    padding: 20px 10px;
 }
 
 /* Logo Image */
@@ -57,7 +56,7 @@
 }
 
 .box-logo {
-    border-top: white 30px solid;
+    margin: 30px 0 30px 0;
 }
 
 .nav__logo {
@@ -89,3 +88,4 @@
 .title__slogan {
     font-size: 1.8rem;
 }
+

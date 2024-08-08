@@ -22,7 +22,7 @@ J'aime le travail en équipe, apprendre de nouvelles notions, relever des défis
   <img id="logo-linkedin" src="/src/assets/images/logo-linkdedin2.png" alt="LinkedIn" />
 </a>
 
-        <iframe className="about__map" src="https://www.google.com/maps/embed?..."></iframe>
+        <iframe className="about__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42187.021946366986!2d1.8112978495557124!3d48.63493552180274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e426c4a08b0127%3A0x40b82c3688c3910!2s78120%20Rambouillet!5e0!3m2!1sen!2sfr!4v1723139694452!5m2!1sen!2sfr"></iframe>
       </div>
     </div>
   );
