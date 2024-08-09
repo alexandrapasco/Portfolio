@@ -1,13 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.scss';
+import DarkTheme from '../DarkTheme/DarkTheme';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const toggleDarkMode = () => setDarkMode(!darkMode);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
   return (
     <header className={menuOpen ? 'open' : ''}>
@@ -22,6 +31,9 @@ function Header() {
             <img id="logo" src="/src/assets/images/Logo-AP.png" alt="Logo du site" />
           </div>
         </nav>
+
+        {/* Utiliser le composant DarkTheme */}
+        <DarkTheme isDarkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
         {/* Utiliser le composant BurgerMenu */}
         <BurgerMenu isOpen={menuOpen} toggleMenu={toggleMenu} />
