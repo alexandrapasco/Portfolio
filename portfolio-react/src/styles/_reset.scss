@@ -16,16 +16,8 @@ html, body {
     overflow-x: hidden; /* Empêche le débordement horizontal */
 }
 
-a, button {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer; 
-}
-
 .title-container {
     position: relative;
-    width: 100%;
     height: auto;
     text-align: center;
     padding: 20px;

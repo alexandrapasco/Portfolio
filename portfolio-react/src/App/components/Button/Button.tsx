@@ -1,9 +1,13 @@
 import React from 'react';
-import './Button.css';
+import './Button.scss';
 
 function Button() {
     return (
-      
+      <div>
+        <button className="button">
+          <a href="">Button</a>
+        </button>
+      </div>
     );
   }
   

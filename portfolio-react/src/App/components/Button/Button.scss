@@ -1,21 +1,11 @@
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+button {
+    margin: auto;
+    display: block;
 }
 
-.button__see-cv, .button__upload-cv {
-    padding: 20px;
+a {
+    font-size: 1.5rem;
     text-decoration: none;
-    border: none;
-    font-family: "Cabin Sketch", sans-serif;
-    font-size: 1rem;
-    background-color: #BF94FF;
-    border-radius: 2.5dvh;
-    border: outset #55595E 5px;
-    transition: all 1s;
-}
-
-.button__see-cv:hover, .button__upload-cv:hover {
-    box-shadow: 12px 12px 8px 2px black;
+    cursor: pointer; 
+    color: white;
 }

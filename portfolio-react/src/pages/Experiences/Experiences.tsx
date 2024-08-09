@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonUploadCV from '../../App/components/Button/ButtonUploadCV/ButtonUploadCV'
 import './Experiences.scss';
 
 function Experiences() {
@@ -9,7 +10,9 @@ function Experiences() {
       </div>
   
     <img id="cv" src="src/assets/images/CV-AP.jpg" alt="Document CV" />
-    
+
+    <ButtonUploadCV />
+      
     </>
 );
 }
