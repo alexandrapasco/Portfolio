@@ -1,3 +1,8 @@
+// Header
+@use "../../../styles/_variables.scss" as *;
+@use "../../../styles/_reset.scss";
+@use "../../../styles/_fonts.scss";
+
 #nav-menu {
     display: flex;
     flex-wrap: wrap;
@@ -5,11 +10,10 @@
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: #fff;
-    border-bottom: #BF94FF 2px solid;
+    border-bottom: $main-high 2px solid;
     font-weight: 700;
     font-style: normal;
-    color: #55595E;
+    color: $grey;
     letter-spacing: 0.1dvh;
     width: 100%;
 }
@@ -21,21 +25,22 @@
     justify-content: center;
     padding: 0 5px;
     text-decoration: none;
-    color: #55595E;
+    color: $grey;
+    font-size: 1.1rem;
     flex: 1;
     transition: all 0.5s;
 }
 
 .nav__link:hover {
-    color: #BF94FF;
-    text-decoration: underline 2px #BF94FF transparent;
+    color: $main-low;
+    text-decoration: underline 2px $main-low, transparent;
     text-underline-offset: -100%;
     transition: 0.5s ease;
 }
 
 .nav__link:focus {
-    color: #670BAD;
-    text-decoration: underline 2px #670BAD;
+    color: $main-high;
+    text-decoration: underline 2px $main-high;
     text-underline-offset: 20px; /* Espacement du soulignement */
     transition: 0.3s ease;
 }
@@ -44,7 +49,6 @@
     display: flex;
     flex-wrap: wrap;
     align-content: center;
-    background-color: #fff;
     gap: 10px;
     padding: 20px 10px;
 }
@@ -82,7 +86,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 1.8rem;
-    color: #670BAD;
+    color: $main-high;
 } 
 
 .title__slogan {
