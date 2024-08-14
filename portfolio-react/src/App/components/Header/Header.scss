@@ -10,12 +10,14 @@
     align-items: center;
     position: sticky;
     top: 0;
-    border-bottom: $main-high 2px solid;
+    border-bottom: $main-highest 2px solid;
     font-weight: 700;
     font-style: normal;
-    color: $grey;
     letter-spacing: 0.1dvh;
     width: 100%;
+    background-image: url("src/assets/images/paper3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .nav__link {
@@ -25,22 +27,22 @@
     justify-content: center;
     padding: 0 5px;
     text-decoration: none;
-    color: $grey;
+    color: $main-highest;
     font-size: 1.1rem;
     flex: 1;
     transition: all 0.5s;
 }
 
 .nav__link:hover {
-    color: $main-low;
+    color:$main-low;
     text-decoration: underline 2px $main-low, transparent;
     text-underline-offset: -100%;
     transition: 0.5s ease;
 }
 
 .nav__link:focus {
-    color: $main-high;
-    text-decoration: underline 2px $main-high;
+    color: $main-low;
+    text-decoration: underline 2px $main-low;
     text-underline-offset: 20px; /* Espacement du soulignement */
     transition: 0.3s ease;
 }
@@ -86,11 +88,12 @@
     font-weight: 400;
     font-style: normal;
     font-size: 1.8rem;
-    color: $main-high;
+    color: $main-highest;
 } 
 
 .title__slogan {
     font-size: 1.8rem;
+    color: $grey;
 }
 
 // Styles pour les ordinateurs

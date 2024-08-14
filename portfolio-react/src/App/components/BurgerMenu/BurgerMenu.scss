@@ -19,6 +19,7 @@
   
   /* Style and transition for the icons */
   .icon {
+    color: $main-high;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transition sur la transformation et l'opacité */
   }
   
@@ -48,6 +49,9 @@
       flex-direction: row;
       align-items: center;
       position: absolute;
+      background-image: url("src/assets/images/paper3.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
       top: 100%;
       right: 0;
       left: 0;
