@@ -1,15 +1,7 @@
 @use "_reset";
 @use "_variables";
 @use "_fonts";
+@use "_darktheme";
 
-body.dark-mode {
-    background-color: #250339; // Par exemple, un fond sombre
-    color: #ffffff; // Texte blanc pour contraster
-  }
-  
-  /* Styles spécifiques pour le Header en mode sombre */
-  body.dark-mode header {
-    background-color: #440a58;
-  }
   
   
