@@ -21,9 +21,11 @@
 }
 
 .sun {
-  transform: rotate(0deg); /* Aucun effet supplémentaire pour le soleil */
+  transform: rotate(0deg);
+  color: $main-higher;
 }
 
 .moon {
-  transform: rotate(0deg); /* Aucun effet supplémentaire pour la lune */
+  transform: rotate(0deg);
+  color: $main-lowest;
 }

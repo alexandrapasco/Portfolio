@@ -93,3 +93,21 @@
     font-size: 1.8rem;
 }
 
+// Styles pour les ordinateurs
+@media (min-width: 1064px) {
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: space-between;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        border-bottom: $main-high 2px solid;
+        font-weight: 700;
+        font-style: normal;
+        color: $grey;
+        letter-spacing: 0.1dvh;
+        width: 100%;
+    }
+  }

@@ -14,18 +14,19 @@ export default function App() {
     if (window.VANTA) {
       // Charger l'effet Vanta quand le composant est monté
       const vantaEffect = window.VANTA.FOG({
-        el: document.body, // Applique l'effet au body
+        el: "body", // Applique l'effet au body
         mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        highlightColor: 0xf6e18c, // Couleur jaune pâle
-        midtoneColor: 0x8f0dd3, // Couleur violette
-        lowlightColor: 0x19aaf6, // Couleur bleue
-        blurFactor: 0.29,
-        speed: 0.20,
-        zoom: 0.40
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0xca4ef8,
+  midtoneColor: 0xfbeb54,
+  lowlightColor: 0x19c1fd,
+  baseColor: 0xffffff,
+  blurFactor: 0.32,
+  speed: 0.20,
+  zoom: 0.90
       });
 
       // Nettoyage lorsque le composant est démonté
