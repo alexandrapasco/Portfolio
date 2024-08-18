@@ -1,20 +1,9 @@
 body.dark-mode {
-    background-image: url("src/assets/images/blackpaper.jpg");
-    }
-    
-    /* Styles spécifiques pour le Header en mode sombre */
-    body.dark-mode header {
-      background-color: #440a58;
-    }
+  background-color: #250339;
+  color: #ffffff;
 
-    body.dark-mode {
-        background-color: #250339;
-        color: #ffffff;
-      
-        header {
-          background-color: #440a58;
-          background-image: url("src/assets/images/blackpaper.jpg");
-        }
-      
-        // Ajoute d'autres éléments spécifiques au mode sombre
-      }
+  header {
+    background-color: #440a58;
+    background-image: url("src/assets/images/blackpaper.jpg"); 
+  }
+}

@@ -9,7 +9,7 @@ function Contact() {
       </div>
 
     <div className="contact">
-      <form action="MAILTO:sachapasco@gmail.com" method="post" enctype="text/plain">
+      <form action="MAILTO:sachapasco@gmail.com" method="post" encType="text/plain">
         <div>
           <label htmlFor="nom">Votre nom</label>
           <input type="text" id="name" name="nom" placeholder="Alexandra Pasco" required />
@@ -20,7 +20,7 @@ function Contact() {
         </div>
         <div>
           <label htmlFor="sujet">Quel est le sujet de votre message ?</label>
-          <select name="sujet" id="sujet" required>
+          <select defaultValue="sujet" id="sujet" required>
             <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
             <option value="proposition-stage">Proposition de stage</option>
             <option value="question">Question à mon propos</option>
