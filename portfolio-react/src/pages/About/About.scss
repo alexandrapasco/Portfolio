@@ -10,10 +10,7 @@
 }
 
 .about__text {
-    display: block;
-    width: 100%;
     padding: 30px;
-    overflow: auto; /* Permet le défilement si nécessaire */
     background-image: url("src/assets/images/paper3.jpg");
     background-size: cover;
     color: $grey;
