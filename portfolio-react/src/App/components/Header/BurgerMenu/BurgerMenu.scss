@@ -1,0 +1,24 @@
+/* Bouton Menu Burger */
+.header__burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.icon {
+  transition: transform 0.3s ease-in-out;
+  color: $cream;
+  font-size: 30px;
+}
+
+.icon.open {
+  transform: rotate(90deg);
+}
+
+.icon.closed {
+  transform: rotate(0deg);
+}

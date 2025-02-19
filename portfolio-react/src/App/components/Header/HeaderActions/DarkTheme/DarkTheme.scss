@@ -1,0 +1,16 @@
+/* DarkTheme.scss */
+.dark-mode-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon.sun, .icon.moon {
+  color: $cream;
+}
+
+.dark-mode-toggle:hover .icon {
+  transform: scale(1.1); /* Agrandissement au survol */
+}

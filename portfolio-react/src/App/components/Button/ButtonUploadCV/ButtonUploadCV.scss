@@ -1,13 +1,13 @@
 .button__upload-cv {
     padding: 10px;
     font-family: "Cabin Sketch", sans-serif;
-    background-color: $main-lower;
+    background-color: $black;
     border-radius: 2.5dvh;
-    border: outset $grey 5px;
+    border: outset $black 5px;
     transition: all 1s;
     margin-top: 2rem;
 }
 
 .button__upload-cv:hover {
-    background-color: $main-highest;
+    background-color: $black;
 }

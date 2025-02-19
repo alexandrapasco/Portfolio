@@ -1,0 +1,90 @@
+@use "_variables" as *;
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: $black;
+    background-color: $cream;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+h1, h2, h3 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Liens et boutons */
+button, a {
+    display: inline-block;
+    font-size: 1.2rem;
+    text-decoration: none;
+    cursor: pointer; 
+    color: $cream;
+    background: transparent;
+    border: none;
+}
+
+.page-section {
+    min-height: 58.875rem; // Pour donner une taille uniforme
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: $beige;
+}
+
+
+.title-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 1px 3px 5px black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+section.page-section {
+    width: 100%;
+    // min-height: $section-height-mobile;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Responsive Desktop */
+// @media (min-width: 768px) {
+    // section {
+        // min-height: $section-height-desktop;
+    // }
+// }

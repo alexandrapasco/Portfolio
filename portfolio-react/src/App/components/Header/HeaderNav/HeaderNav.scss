@@ -1,0 +1,46 @@
+.header__nav-container {
+  display: none; // Caché par défaut sur mobile
+
+  &.header__nav--open {
+    display: flex; // S'affiche uniquement sur mobile
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    z-index: 5;
+
+    @media (min-width: 768px) {
+      display: none; // Masquer le menu burger sur grand écran
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex; // Afficher la barre de navigation normale sur desktop
+    position: static;
+    background: none;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.header__nav {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.header__nav-link {
+  text-decoration: none;
+  color: $cream;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $olive;
+  }
+}

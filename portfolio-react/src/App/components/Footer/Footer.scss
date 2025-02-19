@@ -1,7 +1,7 @@
 // Footer.scss
 @use "../../../styles/_variables.scss" as *;
 @use "../../../styles/_reset.scss";
-@use "../../../styles/_fonts.scss";
+@use "../../../styles/_global.scss";
 
 footer {
     text-align: center;
@@ -9,7 +9,7 @@ footer {
     height: 30%;
     padding: 20px 20px;
     margin-top: 5dvh;
-    background-color: $main-highest;
+    background-color: $black;
     font-size: 0.9rem;
     color: #ffffff;
     letter-spacing: 0.2dvb;

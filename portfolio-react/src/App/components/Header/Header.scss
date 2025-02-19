@@ -1,116 +1,41 @@
-// Header
-@use "../../../styles/_variables.scss" as *;
-@use "../../../styles/_reset.scss";
-@use "../../../styles/_fonts.scss";
-
-#nav-menu {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    border-bottom: $main-highest 2px solid;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: 0.1dvh;
-    width: 100%;
-    background-image: url("src/assets/images/paper3.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 100%;
+  background-color: $kaki;
 }
 
-.nav__link {
-    position: sticky;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 5px;
-    text-decoration: none;
-    color: $main-highest;
-    font-size: 1.1rem;
-    flex: 1;
-    transition: all 0.5s;
+/* Actions comme le mode sombre */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.nav__link:hover {
-    color:$main-low;
-    text-decoration: underline 2px $main-low, transparent;
-    text-underline-offset: -100%;
-    transition: 0.5s ease;
-}
-
-.nav__link:focus {
-    color: $main-low;
-    text-decoration: underline 2px $main-low;
-    text-underline-offset: 20px; /* Espacement du soulignement */
-    transition: 0.3s ease;
-}
-
-.nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    gap: 10px;
-    padding: 20px 10px;
-}
-
-/* Logo Image */
-#logo {
-    width: 20rem;
-    height:20rem;
-}
-
-.box-logo {
-    margin: 30px 0 30px 0;
-}
-
-.nav__logo {
-    display: flex;
-    justify-content: center; /* Centré le contenu horizontalement */
-    align-items: center;
-    width: 100%;
-    padding: 10px 20px;
-    flex-wrap: wrap; /* Permettre le retour à la ligne */
-}
-
-/* Slogan */
-
-.nav__slogan {
-    flex: 3;
-    text-align: center; /* Centrer le texte */
-    margin-top: 20px;
-    min-width: 200px; /* Assurez-vous qu'il y a suffisamment d'espace */
-}
-
-.title__url {
-    font-family: "Aclonica", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.8rem;
-    color: $main-highest;
-} 
-
-.title__slogan {
-    font-size: 1.8rem;
-    color: $grey;
-}
-
-// Styles pour les ordinateurs
-@media (min-width: 1064px) {
-    #nav-menu {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        align-content: space-between;
-        justify-content: center;
-        position: sticky;
-        top: 0;
-        border-bottom: $main-high 2px solid;
-        font-weight: 700;
-        font-style: normal;
-        color: $grey;
-        letter-spacing: 0.1dvh;
-        width: 100%;
-    }
+/* Responsive : cacher la nav sur mobile et afficher le burger */
+@media (max-width: 768px) {
+  .header__actions {
+    display: none; /* Cache les actions (mode sombre) sur mobile */
   }
+
+  .header__burger {
+    display: block;
+  }
+
+  .header__nav-container {
+    display: none; /* Cacher la nav sur mobile */
+  }
+}
+
+/* Sur grand écran, afficher la nav classique */
+@media (min-width: 768px) {
+  .header__burger {
+    display: none; /* Masque le menu burger */
+  }
+
+  .header__nav-container {
+    display: flex; /* Afficher la navigation classique */
+  }
+}

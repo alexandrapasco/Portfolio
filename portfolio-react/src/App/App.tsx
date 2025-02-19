@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react'; // Ajoute l'import de useState
+import React, { useEffect, useState } from 'react'; 
 import Header from './components/Header/Header';
+import Brand from './components/Brand/Brand';
 import About from '../pages/About/About';
 import Experiences from '../pages/Experiences/Experiences';
 import Projects from '../pages/Projects/Projects';
@@ -23,10 +24,10 @@ export default function App() {
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
-        highlightColor: darkModeActive ? 0x2b0958 : 0xd79ef3,
-        midtoneColor: darkModeActive ? 0x220740 : 0x2b0958,
-        lowlightColor: darkModeActive ? 0x0d0025 : 0xc0b10,
-        baseColor: darkModeActive ? 0x000000 : 0xffffff,
+        highlightColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
+        midtoneColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
+        lowlightColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
+        baseColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
         blurFactor: 0.32,
         speed: 0.20,
         zoom: 0.90
@@ -39,8 +40,9 @@ export default function App() {
   }, [isDarkMode]); // L'effet dépend de l'état du mode sombre
 
   return (
-    <div className="App" style={{ position: 'relative', zIndex: 1 }}>
+    <>
       <Header />
+      <Brand />
       <main>
         <About />
         <Experiences />
@@ -48,6 +50,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
+
