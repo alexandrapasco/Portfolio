@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import './DarkTheme.scss';
 
@@ -8,15 +8,26 @@ interface DarkThemeProps {
 }
 
 const DarkTheme: React.FC<DarkThemeProps> = ({ isDarkMode, toggleDarkMode }) => {
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleClick = () => {
+    setIsRotated(!isRotated); // Alterne la rotation
+    toggleDarkMode(); // Active/Désactive le mode sombre
+  };
+
   return (
-    <div className="dark-mode-toggle" onClick={toggleDarkMode} aria-label={isDarkMode ? 'Désactiver le mode sombre' : 'Activer le mode sombre'}>
+    <button
+      className={`dark-mode-toggle ${isRotated ? 'rotated' : ''}`}
+      onClick={handleClick}
+      aria-label={isDarkMode ? 'Désactiver le mode sombre' : 'Activer le mode sombre'}
+    >
       {isDarkMode ? (
         <FaSun className="icon sun" size={30} />
       ) : (
         <FaMoon className="icon moon" size={30} />
       )}
-    </div>
+    </button>
   );
-}
+};
 
 export default DarkTheme;

@@ -1,43 +1,58 @@
-import React, { useEffect, useState } from 'react'; 
-import Header from './components/Header/Header';
-import Brand from './components/Brand/Brand';
-import About from '../pages/About/About';
-import Experiences from '../pages/Experiences/Experiences';
-import Projects from '../pages/Projects/Projects';
-import Contact from '../pages/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import '../styles/index.scss';
+import { useEffect, useState, useRef } from "react";
+import Header from "./components/Header/Header";
+import Brand from "./components/Brand/Brand";
+import About from "../pages/About/About";
+import Experiences from "../pages/Experiences/Experiences";
+import Projects from "../pages/Projects/Projects";
+import Contact from "../pages/Contact/Contact";
+import Footer from "./components/Footer/Footer";
+import Presentation from "../pages/Presentation/Presentation";
+// import * as THREE from "three";
+import BIRDS from "vanta/dist/vanta.birds.min"; // Correction de l'import
 
 export default function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  console.log(isDarkMode);
+
+  // ✅ Correction : on donne un type explicite à vantaRef
+  const vantaRef = useRef<ReturnType<typeof BIRDS> | null>(null);
 
   useEffect(() => {
     // Détecte le mode sombre
-    const darkModeActive = document.body.classList.contains('dark-mode');
+    const darkModeActive = document.body.classList.contains("dark-mode");
     setIsDarkMode(darkModeActive);
 
-    if (window.VANTA) {
-      const vantaEffect = window.VANTA.FOG({
-        el: "body",
+    if (!vantaRef.current) {
+      vantaRef.current = BIRDS({
+        el: document.body,
         mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        highlightColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
-        midtoneColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
-        lowlightColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
-        baseColor: darkModeActive ? 0xFAEBC9 : 0xFAEBC9,
-        blurFactor: 0.32,
-        speed: 0.20,
-        zoom: 0.90
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0xffe7c6,
+  color1: 0x76b007,
+  color2: 0xCEB184,
+  colorMode: "lerpGradient",
+  birdSize: 1.40,
+  wingSpan: 33.00,
+  speedLimit: 6.00,
+  separation: 32.00,
+  alignment: 28.00,
+  cohesion: 60.00,
+  backgroundAlpha: 0.46
       });
-
-      return () => {
-        if (vantaEffect) vantaEffect.destroy();
-      };
     }
-  }, [isDarkMode]); // L'effet dépend de l'état du mode sombre
+
+    return () => {
+      if (vantaRef.current && typeof vantaRef.current.destroy === "function") {
+        vantaRef.current.destroy();
+        vantaRef.current = null;
+      }
+    };
+  }, []); // Exécuté une seule fois au montage
 
   return (
     <>
@@ -45,6 +60,7 @@ export default function App() {
       <Brand />
       <main>
         <About />
+        <Presentation />
         <Experiences />
         <Projects />
         <Contact />
@@ -53,4 +69,3 @@ export default function App() {
     </>
   );
 }
-

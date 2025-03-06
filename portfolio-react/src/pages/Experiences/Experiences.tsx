@@ -1,17 +1,23 @@
 import React from 'react';
-import ButtonUploadCV from '../../App/components/Button/ButtonUploadCV/ButtonUploadCV'
 import './Experiences.scss';
 
 function Experiences() {
   return (
     <>
-    <div className="title-container">
-        <h4 className="title" id="experiences">Expériences</h4>
-      </div>
-  
+
+      <section className="experiences" aria-labelledby="experiences">
+
+  <header className="section-header">
+    <h4 className="section-header__title" id="experiences">Expériences</h4>
+    <h5 className="section-header__subtitle">Un parcours riche en apprentissages</h5>
+  </header>
+
+  <p>Mon parcours professionnel m'a permis de développer...</p>
+
+    </section>
+
     <img id="cv" src="src/assets/images/CV-AP.jpg" alt="Document CV" />
 
-    <ButtonUploadCV />
       
     </>
 );

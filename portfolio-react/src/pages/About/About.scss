@@ -3,63 +3,50 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 2rem;
     text-align: justify;
     margin: auto;
     gap: 1rem;
+    background-image: url(../../assets/images/Fond-Bureau.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 40vh;
+}
+
+.about__header {
+    text-align: center;
+}
+
+.about__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.about__subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.about__content {
+    max-width: 50rem;
+    padding: 2rem;
+    background-color: $cream;
+    color: $black;
+    box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
+    font-size: 1.1rem;
+    border-radius: 3vh;
+    margin: auto; // Centré par défaut sur mobile
+
+    @media (min-width: 1024px) {
+        margin-left: auto; // Décale vers la droite en desktop
+        margin-right: 0; // Assure que ce n'est pas centré
+    }
 }
 
 .about__text {
-    padding: 30px;
-    background-size: cover;
-    color: $black;
-    box-shadow: 3px 3px 20px 18px rgba(0,0,0,0.25);
-    font-weight: bold;
-    font-size: 1.1rem;
-    border-radius: 3vh; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5rem 0 1.5rem 0;
 }
-
-.about__informations {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    width: 100%;
-    margin: auto;
-}
-
-#logo-linkedin {
-    width: 100px; 
-    height: auto;
-}
-
-.button__linkedin {
-    padding: 20px;
-    margin: 50px auto;
-    border: none;
-    border-radius: 20%;
-    box-shadow: 6px 6px 10px 1px rgba(0, 0, 0, 0.616);
-    transition: all 1s;
-}
-
-.button__linkedin:hover {
-    box-shadow: 12px 12px 8px 2px black;
-    background: #0e76a8;
-}
-
-#photo_profil {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-    border-radius: 52% 48% 64% 36% / 57% 47% 53% 43%;
-    box-shadow: 12px 12px 15px 1px rgba(0, 0, 0, 0.616);
-}
-
-.about__map {
-    height: 20rem;
-    border: 1px solid black;
-}
-
-
-
 

@@ -1,11 +1,18 @@
-button, a {
+.button {
     margin: auto;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center; // Pour centrer le texte verticalement
+    border-radius: 30px;
     font-size: 1.5rem;
-    text-decoration: none;
-    cursor: pointer; 
-    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: $kaki;
+    color: $cream;
+    width: 15rem; // Largeur fixe
+    max-width: 80%; // Empêche qu'il prenne toute la largeur
 }
+
 
 
 

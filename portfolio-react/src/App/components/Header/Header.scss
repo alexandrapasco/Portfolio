@@ -2,16 +2,48 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
+  padding: 1.5rem 5rem;
   width: 100%;
   background-color: $kaki;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5); 
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  transition: height 0.3s ease, padding 0.3s ease;
+}
+
+.header__burger, .dark-mode-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $cream;
+  border-radius: 30%;
+  padding: 0.3rem;
+  z-index: 10;
+  transition: transform 0.6s ease-in-out; /* Ajout correct de la transition */
+
+  &:hover {
+    transform: scale(1.3); /* Agrandissement au survol */
+  }
+
+  &.rotated {
+    transform: rotate(360deg); /* Rotation complète au clic */
+  }
+}
+
+.header--small {
+  @extend .header; // Hérite des règles de .header
+  // transform: scaleY(1.3); // Modifie uniquement la transformation
+  padding: 0.1rem 2rem;
+  opacity: 95%;
 }
 
 /* Actions comme le mode sombre */
 .header__actions {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 /* Responsive : cacher la nav sur mobile et afficher le burger */

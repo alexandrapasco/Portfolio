@@ -1,7 +1,4 @@
-@use "_reset";
-@use "_global";
-@use "_variables";
-@use "_darktheme";
-
-  
-  
+@use "./variables" as *;
+@use "./reset";
+@use "./global";
+@use "./darktheme";

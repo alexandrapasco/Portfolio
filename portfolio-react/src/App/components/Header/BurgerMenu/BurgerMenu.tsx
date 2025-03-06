@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './BurgerMenu.scss';
 
@@ -8,18 +8,21 @@ interface BurgerMenuProps {
 }
 
 function BurgerMenu({ isOpen, toggleMenu }: BurgerMenuProps) {
+  const [isRotated, setIsRotated] = useState(false);
+
+  const handleClick = () => {
+    setIsRotated(!isRotated); // Change l'état de la rotation
+    toggleMenu(); // Active/Désactive le menu burger
+  };
+
   return (
-    <div className="burger" onClick={toggleMenu}>
+    <button className={`burger ${isRotated ? 'rotated' : ''}`} onClick={handleClick}>
       {isOpen ? (
-        <div className="icon open">
-          <FaTimes />
-        </div>
+        <FaTimes className="icon open" size={30} />
       ) : (
-        <div className="icon closed">
-          <FaBars />
-        </div>
+        <FaBars className="icon close" size={30} />
       )}
-    </div>
+    </button>
   );
 }
 

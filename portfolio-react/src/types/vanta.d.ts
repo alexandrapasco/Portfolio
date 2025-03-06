@@ -1,5 +1,4 @@
-declare module 'vanta/dist/vanta.fog.min' {
-    const VANTA: any;
-    export default VANTA;
-  }
-  
+declare module 'vanta/dist/vanta.birds.min' {
+  import { VANTA } from "vanta";
+  export default VANTA;
+}

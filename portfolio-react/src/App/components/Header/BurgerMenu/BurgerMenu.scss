@@ -1,24 +1,15 @@
-/* Bouton Menu Burger */
-.header__burger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
+.burger {
+  transition: transform 0.6s ease-in-out;
 }
 
-.icon {
-  transition: transform 0.3s ease-in-out;
-  color: $cream;
-  font-size: 30px;
+.burger.rotated {
+  transform: rotate(360deg);
 }
 
-.icon.open {
-  transform: rotate(90deg);
-}
 
-.icon.closed {
-  transform: rotate(0deg);
+
+@media (min-width: 768px) {
+  .header__burger {
+    display: none;
+  }
 }

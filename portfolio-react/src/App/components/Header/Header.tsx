@@ -8,6 +8,7 @@ import BurgerMenu from './BurgerMenu/BurgerMenu';
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [isSmall, setIsSmall] = useState(false); // 👈 Ajout pour gérer le scroll
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   const toggleDarkMode = () => setDarkMode(!darkMode);
@@ -20,8 +21,18 @@ function Header() {
     }
   }, [darkMode]);
 
+  // 👇 Ajout du useEffect pour détecter le scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSmall(window.scrollY > 50); // Si on scrolle + de 50px, on active la classe
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // Nettoie l'event au démontage
+  }, []);
+
   return (
-    <header className={`header ${menuOpen ? 'header--open' : ''}`}>
+    <header className={`header ${menuOpen ? 'header--open' : ''} ${isSmall ? 'header--small' : ''}`}>
       
       {/* Actions (Mode sombre) */}
       <aside className="header__actions">
