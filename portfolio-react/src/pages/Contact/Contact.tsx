@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './Contact.scss';
 
 function Contact() {
@@ -36,6 +36,9 @@ function Contact() {
         </div>
       </form>
     </div>
+    <a className="presentation__linkedin" href="https://www.linkedin.com/in/alexandrapasco/" target="_blank" rel="noopener noreferrer">
+          <img className="presentation__linkedin-logo" src="/src/assets/images/logo-linkdedin2.png" alt="Profil LinkedIn d'Alexandra Pasco" />
+        </a>
     </>
   );
 }

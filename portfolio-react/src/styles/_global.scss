@@ -6,25 +6,29 @@ body {
 }
 
 h1, h2, h3 {
-    font-size: 2rem;
-    margin-bottom: 16px;
     text-align: center;
 }
 
 h2 {
     font-size: 1.75rem;
-    margin-bottom: 14px;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.75rem;
+    margin: 1rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.2rem;
 }
 
 p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 12px;
 }
 
 /* Liens et boutons */
@@ -40,14 +44,7 @@ svg {
     fill: $kaki; /* Appliquer la couleur kaki aux icônes SVG */
   }
 
-.page-section {
-    min-height: 58.875rem; // Pour donner une taille uniforme
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    color: $beige;
-}
+
 
 
 .title-container {
@@ -60,21 +57,13 @@ svg {
     margin: 1rem;
 }
 
-.title {
-    font-size: 2rem;
-    color: black;
-    padding: 10px;
-    font-weight: bold;
-}
-
-section.page-section {
-    width: 100%;
-    // min-height: $section-height-mobile;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
+.section-anchor {
+    width: 100vw;  // Prend toute la largeur de l'écran
+    min-height: 100vh; // Hauteur minimale de 90% de l'écran
+    max-width: 1440px; // Évite que ça dépasse sur grands écrans
+    margin: 0 auto; // Centre les sections horizontalement
+  }
+  
 
 /* Responsive Desktop */
 // @media (min-width: 768px) {

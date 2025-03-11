@@ -9,10 +9,15 @@
     gap: 1rem;
     width: 100%;
     min-height: 40vh;
+    background-color: $cream;
 }
 
 .presentation__header {
     text-align: center;
+    margin-bottom: 3rem;
+    @media (min-width: 1024px) {
+        margin-bottom: 5rem;
+    }
 }
 
 .presentation__title {
@@ -20,38 +25,40 @@
     font-weight: bold;
 }
 
+.presentation__details {
+    display: flex;
+    align-items: center;
+}
+
 .presentation__subtitle {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 1rem;
 }
 
 .presentation__content {
     max-width: 50rem;
-    padding: 2rem;
-    background-color: $cream;
     color: $black;
-    box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
-    font-size: 1.1rem;
     border-radius: 3vh;
     margin: auto; // Centré par défaut sur mobile
 
     @media (min-width: 1024px) {
-        margin-left: auto; // Décale vers la droite en desktop
-        margin-right: 0; // Assure que ce n'est pas centré
+        max-width: 35%;
+        
     }
 }
 
 .presentation__text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 1.5rem 0 1.5rem 0;
 }
 
 .presentation__details {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    width: 100%;
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .presentation__profile {
@@ -59,12 +66,17 @@
 }
 
 .presentation__photo {
-    width: 100%;
+    width: 50%;
     height: auto;
     display: block;
     margin: auto;
-    border-radius: 52% 48% 64% 36% / 57% 47% 53% 43%;
-    box-shadow: 0.8em 0.8em 1em 0.1em rgba(0, 0, 0, 0.616);
+    // border-radius: 52% 48% 64% 36% / 57% 47% 53% 43%;
+    border-radius: 50%;
+    border: 1px solid $black;
+    // box-shadow: 0.8em 0.8em 1em 0.1em rgba(0, 0, 0, 0.616);
+    @media (min-width: 1024px) {
+        width: 60%;
+    }
 }
 
 .presentation__linkedin {
