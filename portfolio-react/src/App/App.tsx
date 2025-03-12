@@ -2,11 +2,11 @@ import { useEffect, useState, useRef } from "react";
 import Header from "./components/Header/Header";
 import Brand from "./components/Brand/Brand";
 import About from "../pages/About/About";
-import Experiences from "../pages/Experiences/Experiences";
+import Skills from "../pages/Skills/Skills";
 import Projects from "../pages/Projects/Projects";
 import Contact from "../pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-import Presentation from "../pages/Presentation/Presentation";
+import Profile from "../pages/Profile/Profile";
 // import * as THREE from "three";
 import BIRDS from "vanta/dist/vanta.birds.min"; // Correction de l'import
 
@@ -26,23 +26,23 @@ export default function App() {
       vantaRef.current = BIRDS({
         el: document.body,
         mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  backgroundColor: 0xFAEBC9,
-  color1: 0x50513A,
-  color2: 0xCEB184,
-  colorMode: "lerpGradient",
-  birdSize: 1.40,
-  wingSpan: 33.00,
-  speedLimit: 6.00,
-  separation: 32.00,
-  alignment: 28.00,
-  cohesion: 60.00,
-  backgroundAlpha: 0.46
+        touchControls: true,
+       gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        backgroundColor: 0xFAEBC9,
+        color1: 0x50513A,
+        color2: 0xCEB184,
+        colorMode: "lerpGradient",
+        birdSize: 1.40,
+        wingSpan: 33.00,
+        speedLimit: 6.00,
+        separation: 32.00,
+        alignment: 28.00,
+        cohesion: 60.00,
+        backgroundAlpha: 0.46
       });
     }
 
@@ -60,8 +60,8 @@ export default function App() {
       <Brand />
       <main>
         <About />
-        <Presentation />
-        <Experiences />
+        <Profile />
+        <Skills />
         <Projects />
         <Contact />
       </main>

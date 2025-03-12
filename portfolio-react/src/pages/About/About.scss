@@ -14,20 +14,6 @@
     width: 100%;
 }
 
-.about__header {
-    text-align: center;
-}
-
-.about__title {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.about__subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
 .about__content {
     max-width: 50rem;
     padding: 2rem;
@@ -40,8 +26,9 @@
 
     @media (min-width: 1024px) {
         max-width: 40%;
-        margin-left: auto; // Décale vers la droite en desktop
-        margin-right: 0; // Assure que ce n'est pas centré
+        margin-right: 3rem;
+        // margin-left: auto; // Décale vers la droite en desktop
+        // margin-right: 0; // Assure que ce n'est pas centré
     }
 }
 

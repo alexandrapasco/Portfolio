@@ -10,25 +10,41 @@ h1, h2, h3 {
 }
 
 h2 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    @media (min-width: 1024px) {
+        font-size: 1.8rem;;
+    }
 }
 
 h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin: 1rem;
+    @media (min-width: 1024px) {
+        font-size: 1.7rem;;
+    }
 }
 
 h4 {
     font-size: 1.3rem;
+    text-align: center;
+    @media (min-width: 1024px) {
+        font-size: 1.5rem;
+    }
 }
 
 h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    @media (min-width: 1024px) {
+        font-size: 1.2rem;
+    }
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 0.8rem;
+    // line-height: 1.6;
+    @media (min-width: 1024px) {
+        font-size: 1rem;
+    }
 }
 
 /* Liens et boutons */
@@ -43,19 +59,6 @@ button, a {
 svg {
     fill: $kaki; /* Appliquer la couleur kaki aux icônes SVG */
   }
-
-
-
-
-.title-container {
-    position: relative;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-}
 
 .section-anchor {
     width: 100vw;  // Prend toute la largeur de l'écran

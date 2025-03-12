@@ -2,17 +2,29 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center; // Pour centrer le texte verticalement
+    align-items: center; // Centre le texte verticalement
     border-radius: 30px;
-    font-size: 1.5rem;
     font-weight: bold;
+    font-size: 1rem;
     padding: 1rem;
     background-color: $kaki;
     color: $cream;
     width: 15rem; // Largeur fixe
     max-width: 80%; // Empêche qu'il prenne toute la largeur
-}
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 
-
-
+    @media (min-width: 1024px) {
+        font-size: 1.3rem;
+    }
+  
+    &:hover {
+      background-color: $olive; // Assombrit légèrement la couleur
+      transform: scale(1.05); // Légère mise en avant
+    }
+  
+    &:active {
+      transform: scale(0.98); // Effet de clic réaliste
+    }
+  }
+  
 

@@ -1,4 +1,4 @@
-.presentation {
+.profile {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,30 +12,19 @@
     background-color: $cream;
 }
 
-.presentation__header {
-    text-align: center;
+.profile__header {
     margin-bottom: 3rem;
     @media (min-width: 1024px) {
         margin-bottom: 5rem;
     }
 }
 
-.presentation__title {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.presentation__details {
+.profile__details {
     display: flex;
     align-items: center;
 }
 
-.presentation__subtitle {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.presentation__content {
+.profile__content {
     max-width: 50rem;
     color: $black;
     border-radius: 3vh;
@@ -43,16 +32,16 @@
 
     @media (min-width: 1024px) {
         max-width: 35%;
-        
+        margin-left: 5rem;
     }
 }
 
-.presentation__text {
+.profile__text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 1.5rem 0 1.5rem 0;
 }
 
-.presentation__details {
+.profile__details {
     display: flex;
     flex-direction: column;
     @media (min-width: 1024px) {
@@ -61,15 +50,17 @@
     }
 }
 
-.presentation__profile {
+.profile__profile {
     text-align: center;
 }
 
-.presentation__photo {
+.profile__photo {
     width: 50%;
     height: auto;
     display: block;
     margin: auto;
+    margin-top: 1rem;
+    gap: 9px;
     // border-radius: 52% 48% 64% 36% / 57% 47% 53% 43%;
     border-radius: 50%;
     border: 1px solid $black;
@@ -79,7 +70,7 @@
     }
 }
 
-.presentation__linkedin {
+.profile__linkedin {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,12 +85,12 @@
     }
 }
 
-.presentation__linkedin-logo {
+.profile__linkedin-logo {
     width: 6rem;
     height: auto;
 }
 
-.presentation__map {
+.profile__map {
     height: 20rem;
     border: 0.1rem solid black;
     width: 100%;
