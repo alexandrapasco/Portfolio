@@ -91,11 +91,13 @@ function Skills() {
         </article>
       </aside>
 
-      {/* Bouton vers la section "Profil" */}
-      <Button text="En savoir plus" href="#presentation" />
-      <img id="cv" src="src/assets/images/CV-AP.jpg" alt="Document CV" />
+      {/* Bouton de téléchargement fichier" */}
+      <Button text="Télécharger le CV" as="a" href="/CV_Alexandra_PASCO.pdf" download />
+
     </section>
   );
 }
 
 export default Skills;
+
+
