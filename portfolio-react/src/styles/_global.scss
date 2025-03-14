@@ -57,7 +57,7 @@ button, a {
 }
 
 svg {
-    fill: $kaki; /* Appliquer la couleur kaki aux icônes SVG */
+    fill: $kaki; 
   }
 
 .section-anchor {
@@ -66,11 +66,4 @@ svg {
     max-width: 1440px; // Évite que ça dépasse sur grands écrans
     margin: 0 auto; // Centre les sections horizontalement
   }
-  
-
-/* Responsive Desktop */
-// @media (min-width: 768px) {
-    // section {
-        // min-height: $section-height-desktop;
-    // }
-// }
+ 

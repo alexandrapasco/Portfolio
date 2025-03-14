@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Button from '../../App/components/Button/Button';
 import './Skills.scss';
 
@@ -92,7 +92,12 @@ function Skills() {
       </aside>
 
       {/* Bouton de téléchargement fichier" */}
-      <Button text="Télécharger le CV" as="a" href="/CV_Alexandra_PASCO.pdf" download />
+      <Button 
+  text="Télécharger le CV" 
+  as="a" 
+  href="/docs/CV_Alexandra_PASCO.pdf" 
+  download 
+/>
 
     </section>
   );

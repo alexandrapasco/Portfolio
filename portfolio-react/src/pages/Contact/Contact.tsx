@@ -1,45 +1,80 @@
-// import React from 'react';
+import Button from '../../App/components/Button/Button';
 import './Contact.scss';
 
 function Contact() {
   return (
-    <>
-    <div className="title-container">
-        <h4 className="title" id="contact">Contact</h4>
-      </div>
+    <section className="contact section-anchor" aria-labelledby="contact">
+      
+      <header className="contact__header">
+        <h3 className="contact__title" id="contact">Vous souhaitez me contacter ?</h3>
+        <h4 className="contact__subtitle">Une question, un projet, une collaboration ? Écrivons la suite ensemble !</h4>
+      </header>
 
-    <div className="contact">
-      <form action="MAILTO:sachapasco@gmail.com" method="post" encType="text/plain">
-        <div>
-          <label htmlFor="nom">Votre nom</label>
-          <input type="text" id="name" name="nom" placeholder="Alexandra Pasco" required />
-        </div>
-        <div>
-          <label htmlFor="email">Votre e-mail</label>
-          <input type="email" id="mail" name="email" placeholder="s.alexandra.pasco@gmail.com" required />
-        </div>
-        <div>
-          <label htmlFor="sujet">Quel est le sujet de votre message ?</label>
-          <select defaultValue="sujet" id="sujet" required>
-            <option value="" disabled selected hidden>Choisissez le sujet de votre message</option>
-            <option value="proposition-stage">Proposition de stage</option>
-            <option value="question">Question à mon propos</option>
-            <option value="autre">Autre...</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="message">Votre message</label>
-          <textarea id="message" name="message" placeholder="Écrivez votre message ici." required></textarea>
-        </div>
-        <div>
-          <button type="submit">Envoyer</button>
-        </div>
-      </form>
-    </div>
-    <a className="presentation__linkedin" href="https://www.linkedin.com/in/alexandrapasco/" target="_blank" rel="noopener noreferrer">
-          <img className="presentation__linkedin-logo" src="/src/assets/images/logo-linkdedin2.png" alt="Profil LinkedIn d'Alexandra Pasco" />
-        </a>
-    </>
+      <article className="contact__container">
+        
+        {/* Formulaire de contact */}
+        <form className="contact__form" aria-labelledby="contact-title">
+          <fieldset className="contact__fieldset">
+            <legend className="contact__legend">Informations personnelles</legend>
+            <label className="contact__label" htmlFor="name">Nom *</label>
+            <input className="contact__input" type="text" id="name" name="name" required />
+
+            <label className="contact__label" htmlFor="firstname">Prénom</label>
+            <input className="contact__input" type="text" id="firstname" name="firstname" />
+          </fieldset>
+
+          <fieldset className="contact__fieldset">
+            <legend className="contact__legend">Coordonnées</legend>
+            <label className="contact__label" htmlFor="email">E-mail *</label>
+            <input className="contact__input" type="email" id="email" name="email" required />
+
+            <label className="contact__label" htmlFor="phone">Téléphone *</label>
+            <input className="contact__input" type="tel" id="phone" name="phone" required />
+          </fieldset>
+
+          <fieldset className="contact__fieldset">
+            <legend className="contact__legend">Votre message</legend>
+            <label className="contact__label" htmlFor="subject">Objet</label>
+            <input className="contact__input" type="text" id="subject" name="subject" />
+
+            <label className="contact__label" htmlFor="message">Message</label>
+            <textarea className="contact__textarea" id="message" name="message" rows="5"></textarea>
+          </fieldset>
+
+          <div aria-live="polite" className="contact__error"></div>
+
+            <Button type="submit" className="contact__button">Envoyer</Button>
+          </form>
+        
+        {/* Infos de contact */}
+        <aside className="contact__info">
+          <ul className="contact__list">
+            <li className="contact__item">
+              <img className="contact__icon" src="/icons/phone.svg" alt="Icône téléphone" />
+              06.29.32.08.48
+            </li>
+            <li className="contact__item">
+              <img className="contact__icon" src="/icons/email.svg" alt="Icône email" />
+              <a href="mailto:s.alexandra.pasco@gmail.com">s.alexandra.pasco@gmail.com</a>
+            </li>
+            <li className="contact__item">
+              <img className="contact__icon" src="/icons/linkedin.svg" alt="Icône LinkedIn" />
+              <a href="https://linkedin.com/in/alexandrapasco" target="_blank" rel="noopener noreferrer">alexandrapasco</a>
+            </li>
+            <li className="contact__item">
+              <img className="contact__icon" src="/icons/github.svg" alt="Icône GitHub" />
+              <a href="https://github.com/alexandrapasco" target="_blank" rel="noopener noreferrer">alexandrapasco</a>
+            </li>
+            <li className="contact__item">
+              <img className="contact__icon" src="/icons/map.svg" alt="Icône localisation" />
+              <a href="https://www.google.com/maps/place/78120+Rambouillet" target="_blank" rel="noopener noreferrer">
+                78120 Rambouillet
+              </a>
+            </li>
+          </ul>
+        </aside>
+      </article>
+    </section>
   );
 }
 

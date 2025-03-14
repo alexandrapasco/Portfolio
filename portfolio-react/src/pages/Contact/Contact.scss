@@ -1,82 +1,128 @@
 .contact {
-    width: 90%;
-    border-radius: 3vh; 
-    padding: 0 20px;
-    background: white;
-    display: block;
-    margin: auto;
-    color: #303030;
-    box-shadow: 3px 3px 20px 18px rgba(0,0,0,0.25);
-}
-
-
-form div {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 83px;
-    margin-top: 25px;
-}
-        
-form div > label {
-    margin-top: 20px;
-    font-size: 1rem;
-}
-        
-form div > input, form div > select, form div > textarea {
-    background-color: #DCD4E3;
-    border: none;
-    border-radius: 3px;
-    font-size: 1rem;
-    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.25);
-    font-family: 'Courier New', Courier, monospace;
-}
-        
-form div > input, form div > select {
-    height: 50px;
-    padding-left: 10px;
-}
-        
-form div > select {
-    appearance: none;
-    background-size: 15px;
-    background-image: url('data:image/svg+xml;base64,...'); /* Abbreviated for brevity */
-    background-position: right 10px top 50%;
-    background-repeat: no-repeat;
-}
-        
-form div > textarea {
-    height: 195px;
-    padding: 15px 10px 0 10px;
-}
-        
-form div > input::placeholder, form div > textarea::placeholder {
-    color: #303030;
-}
-        
-form div > select:invalid {
-    color: #303030;
-}
-        
-form div:last-child {
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
-}
-        
-form button {
+    background-image: url(../../assets/images/Fond-Réunion.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    max-width: 300px;
-    height: 60px;
-    font-weight: 700;
-    font-size: 28px;
-    background: white;
-    border: rgba(48, 48, 48, 0.5) solid 1px;
-    border-radius: 5px;
-    box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.25);
-    color: #303030;
-}
+    margin: auto;
+  
+    &__header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+  
+    &__container {
+      display: flex;
+      flex-direction: column;
+      min-width: 23rem;  
+      background-color: $cream;
+      margin: auto;
+      border-radius: 3vh;
+      box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
+    
+      @media (min-width: 1024px) {
+        max-width: 40%;
+      }
+    
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+    
+  
+    /* --- FORMULAIRE --- */
+    &__form {
+      flex: 1;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+  
+    &__fieldset {
+      border: none;
+      margin-bottom: 1.5rem;
+    }
+  
+    &__legend {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: $black;
+      text-align: center;
+    }
+  
+    &__label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      color: black;
+    }
+  
+    &__input,
+    &__textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid $beige;
+      border-radius: 3vh;
+      font-size: 1rem;
+      background: $kaki;
+    }
+  
+    &__textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+  
+    /* --- BOUTON (utilisation de ton composant Button) --- */
+    &__button {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+    }
+  
+    /* --- INFOS DE CONTACT --- */
+    &__info {
+      flex: 1;
+      padding: 2rem;
+      border-radius: 8px;
+    }
+  
+    &__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: $black;
+      font-weight: bold;
+    }
+  
+    .contact__item a {
+      color: inherit; // Hérite de la couleur du parent (.contact__item)
+      font-weight: bold;
+      text-decoration: none; // Supprime le soulignement si nécessaire
+    }
+    
+    .contact__item a:hover {
+      color: $olive; // Change la couleur au survol
+    }
+    
 
-form button:hover {
-    background: #DCD4E3;
-    cursor: pointer;
-}
+    &__icon {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+  
+  }
+  
+  

@@ -15,7 +15,7 @@
 }
 
 .about__content {
-    max-width: 50rem;
+    // min-width: 23rem; 
     padding: 2rem;
     background-color: $cream;
     color: $black;
@@ -26,7 +26,7 @@
 
     @media (min-width: 1024px) {
         max-width: 40%;
-        margin-right: 3rem;
+        margin-right: 10rem;
         // margin-left: auto; // Décale vers la droite en desktop
         // margin-right: 0; // Assure que ce n'est pas centré
     }
