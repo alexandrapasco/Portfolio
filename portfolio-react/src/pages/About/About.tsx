@@ -21,7 +21,8 @@ function About() {
         </p>
 
         {/* Bouton qui redirige vers l'ancre "Presentation" */}
-        <Button text="En savoir plus" href="#Presentation" />
+        <Button text="En savoir plus" href="#profile" as="a" />
+
 
       </article>
 

@@ -43,7 +43,7 @@ function Contact() {
 
           <div aria-live="polite" className="contact__error"></div>
 
-            <Button type="submit" className="contact__button">Envoyer</Button>
+            <Button type="submit" className="contact__button">Envoyer</Button> ICI
           </form>
         
         {/* Infos de contact */}

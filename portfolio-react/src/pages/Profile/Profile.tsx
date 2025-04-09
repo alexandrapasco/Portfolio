@@ -6,7 +6,7 @@ function Profile() {
     <section className="profile section-anchor" aria-labelledby="profile">
 
       <header className="profile__header">
-        <h3 className="profile__title" id="presentation">Qui suis-je ?</h3>
+        <h3 className="profile__title" id="profile">Qui suis-je ?</h3>
         <h4 className="profile__subtitle">Observer, comprendre, créer : ma vision du web.</h4>
       </header>
 
