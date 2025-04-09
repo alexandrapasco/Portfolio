@@ -18,7 +18,7 @@
     &__container {
       display: flex;
       flex-direction: column;
-      min-width: 23rem;  
+      padding: 2rem;  
       background-color: $cream;
       margin: auto;
       border-radius: 3vh;
@@ -36,8 +36,8 @@
   
     /* --- FORMULAIRE --- */
     &__form {
+      margin: auto;
       flex: 1;
-      padding: 2rem;
       border-radius: 8px;
     }
   

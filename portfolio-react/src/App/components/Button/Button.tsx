@@ -9,6 +9,7 @@ interface ButtonProps {
   download?: boolean;
   target?: "_blank" | "_self";
   as?: "button" | "a";
+  className?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({ 

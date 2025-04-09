@@ -93,6 +93,7 @@ function Skills() {
 
       {/* Bouton de téléchargement fichier" */}
       <Button 
+  className="button-download-cv"    
   text="Télécharger le CV" 
   as="a" 
   href="/docs/CV_Alexandra_PASCO.pdf" 
