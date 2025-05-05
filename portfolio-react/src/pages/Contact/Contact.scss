@@ -1,14 +1,29 @@
 .contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative; // indispensable
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; // pour éviter que le fond dépasse
+
+  // Le vrai fond avec opacité
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     background-image: url(../../assets/images/Fond-Réunion.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    margin: auto;
+    opacity: 0.5; // ajuste l’opacité ici
+    z-index: 0;
+  }
+
+  // Tout le contenu au-dessus du fond
+  > * {
+    position: relative;
+    z-index: 1;
+  }
   
     &__header {
       text-align: center;
@@ -19,39 +34,58 @@
       display: flex;
       flex-direction: column;
       padding: 2rem;  
+      gap: 3rem;
       background-color: $cream;
       margin: auto;
       border-radius: 3vh;
       box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
     
       @media (min-width: 1024px) {
-        max-width: 40%;
+        max-width: 90%;
+      }
+    
+      @media (min-width: 1200px) {
+        max-width: 80%;
+      }
+    
+      @media (min-width: 1440px) {
+        max-width: 70%;
       }
     
       @media (min-width: 768px) {
         flex-direction: row;
+        max-width: 90%;
       }
     }
     
-  
     /* --- FORMULAIRE --- */
     &__form {
       margin: auto;
       flex: 1;
       border-radius: 8px;
+      display: grid;
+      gap: 1.5rem;
+
+      @media (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        align-items: start;
+      }
     }
   
     &__fieldset {
       border: none;
       margin-bottom: 1.5rem;
-    }
-  
-    &__legend {
-      font-weight: bold;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: $black;
-      text-align: center;
+      grid-column: span 2;
+      @media (min-width: 768px) {
+        &:nth-of-type(1),
+        &:nth-of-type(2) {
+          grid-column: span 1;
+        }
+        &:nth-of-type(3) {
+          grid-column: span 2;
+        }
+      }
     }
   
     &__label {
@@ -69,6 +103,8 @@
       border-radius: 3vh;
       font-size: 1rem;
       background: $kaki;
+      min-width: 0;
+      color: $cream;
     }
   
     &__textarea {
@@ -76,24 +112,26 @@
       min-height: 120px;
     }
   
-    /* --- BOUTON (utilisation de ton composant Button) --- */
+    /* --- BOUTON --- */
     &__button {
       display: block;
       width: 100%;
       margin-top: 1rem;
+      grid-column: span 2;
     }
   
     /* --- INFOS DE CONTACT --- */
     &__info {
       flex: 1;
-      padding: 2rem;
+      padding: 2rem 3rem;
       border-radius: 8px;
     }
   
     &__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem; 
+      padding-right: 3rem;
     }
   
     &__item {
@@ -107,9 +145,16 @@
     }
   
     .contact__item a {
-      color: inherit; // Hérite de la couleur du parent (.contact__item)
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: inherit;
       font-weight: bold;
-      text-decoration: none; // Supprime le soulignement si nécessaire
+      text-decoration: none;
+    
+      @media (max-width: 767px) {
+        justify-content: center; // si tu veux que les icônes soient centrées
+      }
     }
     
     .contact__item a:hover {
@@ -121,6 +166,16 @@
       width: 24px;
       height: 24px;
       display: inline-block;
+      @media (max-width: 767px) {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+
+    .contact__text {
+      @media (max-width: 767px) {
+        display: none;
+      }
     }
   
   }
