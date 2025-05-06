@@ -1,4 +1,10 @@
-// import React from 'react';
+import {
+  SiHtml5, SiCss3, SiJavascript, SiReact,
+  SiSequelize, SiPostgresql, SiNodedotjs,
+  SiWordpress, SiAdobephotoshop, SiFigma, SiCanva,
+  SiTrello, SiNotion, SiDiscord, SiGooglecalendar
+} from 'react-icons/si';
+
 import Button from '../../App/components/Button/Button';
 import './Skills.scss';
 
@@ -19,22 +25,28 @@ function Skills() {
               <details className="skills__details">
                 <summary className="skills__summary">Intégration web</summary>
                 <ul className="skills__icons">
-                  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" /></li>
-                  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" /></li>
-                  <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></li>
+                  <li><SiHtml5 /></li>
+                  <li><SiCss3 /></li>
+                  <li><SiJavascript /></li>
                 </ul>
               </details>
             </li>
             <li>
               <details className="skills__details">
                 <summary className="skills__summary">Front-end</summary>
-                <p>React, Vue.js, Svelte</p>
+                <ul className="skills__icons">
+                  <li><SiReact /></li>
+                </ul>
               </details>
             </li>
             <li>
               <details className="skills__details">
                 <summary className="skills__summary">Back-end</summary>
-                <p>Node.js, Express, PHP</p>
+                <ul className="skills__icons">
+                  <li><SiSequelize /></li>
+                  <li><SiPostgresql /></li>
+                  <li><SiNodedotjs /></li>
+                </ul>
               </details>
             </li>
           </ul>
@@ -47,19 +59,29 @@ function Skills() {
             <li>
               <details className="skills__details">
                 <summary className="skills__summary">CMS</summary>
-                <p>WordPress, Joomla, Drupal</p>
+                <ul className="skills__icons">
+                  <li><SiWordpress /></li>
+                </ul>
               </details>
             </li>
             <li>
               <details className="skills__details">
                 <summary className="skills__summary">Infographie</summary>
-                <p>Photoshop, Illustrator, Figma</p>
+                <ul className="skills__icons">
+                  <li><SiAdobephotoshop /></li>
+                  <li><SiFigma /></li>
+                  <li><SiCanva /></li>
+                </ul>
               </details>
             </li>
             <li>
               <details className="skills__details">
                 <summary className="skills__summary">Gestion de projet</summary>
-                <p>Scrum, Kanban, Trello</p>
+                <ul className="skills__icons">
+                  <li><SiTrello /></li>
+                  <li><SiNotion /></li>
+                  <li><SiDiscord /></li>
+                </ul>
               </details>
             </li>
           </ul>
@@ -72,7 +94,9 @@ function Skills() {
             <li>
               <details className="skills__details">
                 <summary className="skills__summary">Organisation</summary>
-                <p>Capacité à gérer plusieurs projets efficacement.</p>
+                <ul className="skills__icons">
+                  <li><SiGooglecalendar /></li>
+                </ul>
               </details>
             </li>
             <li>
@@ -91,19 +115,15 @@ function Skills() {
         </article>
       </aside>
 
-      {/* Bouton de téléchargement fichier" */}
       <Button 
-  className="button-download-cv"    
-  text="Télécharger le CV" 
-  as="a" 
-  href="/docs/CV_Alexandra_PASCO.pdf" 
-  download 
-/>
-
+        className="button-download-cv"    
+        text="Télécharger le CV" 
+        as="a" 
+        href="/docs/CV_Alexandra_PASCO.pdf" 
+        download 
+      />
     </section>
   );
 }
 
 export default Skills;
-
-

@@ -7,6 +7,11 @@ footer {
     margin-top: 5dvh;
     background-color: $black;
     font-size: 0.9rem;
-    color: #ffffff;
+    color: $cream;
     letter-spacing: 0.2dvb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    @media (min-width: 768px) {
+        font-size: 1.1rem;
+      }
 }

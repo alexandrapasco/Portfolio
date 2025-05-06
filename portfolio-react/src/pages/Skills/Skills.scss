@@ -138,9 +138,11 @@
         display: inline-block;
       }
   
-      img {
+      img, svg {
         width: 30px;
-        height: auto;
+        height: 30px;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
       }
     }
   }
