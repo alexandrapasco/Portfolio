@@ -2,13 +2,15 @@ import {
   SiHtml5, SiCss3, SiJavascript, SiReact,
   SiSequelize, SiPostgresql, SiNodedotjs,
   SiWordpress, SiAdobephotoshop, SiFigma, SiCanva,
-  SiTrello, SiNotion, SiDiscord, SiGooglecalendar
+  SiTrello, SiNotion, SiDiscord, SiGoogledrive
 } from 'react-icons/si';
+
+import { FaCheckCircle, FaLightbulb, FaUsers } from 'react-icons/fa';
 
 import Button from '../../App/components/Button/Button';
 import './Skills.scss';
 
-function Skills() {
+function Skills(): JSX.Element {
   return (
     <section className="skills section-anchor" aria-labelledby="skills">
       <header className="skills__header">
@@ -17,110 +19,49 @@ function Skills() {
       </header>
 
       <aside className="skills__cards">
-        {/* Carte Technologies */}
         <article className="skills__card">
           <h5 className="skills__card-title">Technologies</h5>
-          <ul className="skills__list">
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Intégration web</summary>
-                <ul className="skills__icons">
-                  <li><SiHtml5 /></li>
-                  <li><SiCss3 /></li>
-                  <li><SiJavascript /></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Front-end</summary>
-                <ul className="skills__icons">
-                  <li><SiReact /></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Back-end</summary>
-                <ul className="skills__icons">
-                  <li><SiSequelize /></li>
-                  <li><SiPostgresql /></li>
-                  <li><SiNodedotjs /></li>
-                </ul>
-              </details>
-            </li>
+          <ul className="skills__icons">
+            <li className="skills__icon-item"><SiHtml5 size={40} /><p>HTML</p></li>
+            <li className="skills__icon-item"><SiCss3 size={40} /><p>CSS</p></li>
+            <li className="skills__icon-item"><SiJavascript size={40} /><p>JavaScript</p></li>
+            <li className="skills__icon-item"><SiReact size={40} /><p>React</p></li>
+            <li className="skills__icon-item"><SiSequelize size={40} /><p>Sequelize</p></li>
+            <li className="skills__icon-item"><SiPostgresql size={40} /><p>PostgreSQL</p></li>
+            <li className="skills__icon-item"><SiNodedotjs size={40} /><p>Node.js</p></li>
           </ul>
         </article>
 
-        {/* Carte Divers */}
         <article className="skills__card">
           <h5 className="skills__card-title">Divers</h5>
-          <ul className="skills__list">
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">CMS</summary>
-                <ul className="skills__icons">
-                  <li><SiWordpress /></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Infographie</summary>
-                <ul className="skills__icons">
-                  <li><SiAdobephotoshop /></li>
-                  <li><SiFigma /></li>
-                  <li><SiCanva /></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Gestion de projet</summary>
-                <ul className="skills__icons">
-                  <li><SiTrello /></li>
-                  <li><SiNotion /></li>
-                  <li><SiDiscord /></li>
-                </ul>
-              </details>
-            </li>
+          <ul className="skills__icons">
+            <li className="skills__icon-item"><SiWordpress size={40} /><p>WordPress</p></li>
+            <li className="skills__icon-item"><SiAdobephotoshop size={40} /><p>Photoshop</p></li>
+            <li className="skills__icon-item"><SiFigma size={40} /><p>Figma</p></li>
+            <li className="skills__icon-item"><SiCanva size={40} /><p>Canva</p></li>
+            <li className="skills__icon-item"><SiTrello size={40} /><p>Trello</p></li>
+            <li className="skills__icon-item"><SiNotion size={40} /><p>Notion</p></li>
+            <li className="skills__icon-item"><SiDiscord size={40} /><p>Discord</p></li>
+            <li className="skills__icon-item"><SiGoogledrive size={40} /><p>Google Drive</p></li>
           </ul>
         </article>
 
-        {/* Carte Savoirs-Être */}
         <article className="skills__card">
           <h5 className="skills__card-title">Savoirs-Être</h5>
           <ul className="skills__list">
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Organisation</summary>
-                <ul className="skills__icons">
-                  <li><SiGooglecalendar /></li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Créativité</summary>
-                <p>Force de proposition pour de nouvelles idées.</p>
-              </details>
-            </li>
-            <li>
-              <details className="skills__details">
-                <summary className="skills__summary">Travail en équipe</summary>
-                <p>Bonne communication et collaboration.</p>
-              </details>
-            </li>
+            <li><div className="skills__icon-item"><FaCheckCircle size={40} /><p>Organisation</p></div></li>
+            <li><div className="skills__icon-item"><FaLightbulb size={40} /><p>Créativité</p></div></li>
+            <li><div className="skills__icon-item"><FaUsers size={40} /><p>Travail en équipe</p></div></li>
           </ul>
         </article>
       </aside>
 
-      <Button 
-        className="button-download-cv"    
-        text="Télécharger le CV" 
-        as="a" 
-        href="/docs/CV_Alexandra_PASCO.pdf" 
-        download 
+      <Button
+        className="button-download-cv"
+        text="Télécharger le CV"
+        as="a"
+        href="/docs/CV_Alexandra_PASCO.pdf"
+        download
       />
     </section>
   );

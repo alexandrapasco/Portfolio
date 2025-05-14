@@ -1,161 +1,123 @@
 .skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/images/Fond-Bureau2.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+
+  &__header {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0 2rem 2rem 2rem;
+    background-color: $cream;
+    opacity: 90%;
+    border-radius: 30%;
+    box-shadow: 2px 5px 5px $black;
+    transition: border-radius 0.4s ease-in-out, padding 0.3s ease-in-out;
+
+    @media (min-width: 768px) {
+      border-radius: 40%;
+    }
+
+    @media (min-width: 1024px) {
+      margin-bottom: 5rem;
+      padding: 0 3rem 3rem 3rem;
+      border-radius: 50%;
+    }
+  }
+
+  &__cards {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../../assets/images/Fond-Bureau2.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 2rem;
-    width: 100%;
+    gap: 1.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__card {
+    min-width: 23rem;
     margin: auto;
-  
-    &__header {
-        margin-top: 3rem;
-        margin-bottom: 3rem;
-        padding: 0 2rem 2rem 2rem;
-        background-color: $cream;
-        opacity: 90%;
-        border-radius: 30%;
-        box-shadow: 2px 5px 5px $black;
-        transition: border-radius 0.4s ease-in-out, padding 0.3s ease-in-out;
-      
-        @media (min-width: 768px) {
-          border-radius: 40%;
-        }
-      
-        @media (min-width: 1024px) {
-          margin-bottom: 5rem;
-          padding: 0 3rem 3rem 3rem;
-          border-radius: 50%;
-        }
-      }
-      
-    &__cards {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
+    padding: 1rem;
+    border: 1px solid $beige;
+    border-radius: 30px;
+    background-color: $cream;
+  }
 
-      @media (min-width: 768px) {
-        flex-direction: row;
-        flex-wrap: wrap; // Permet de gérer les colonnes sur tablette
-        justify-content: center;
-      }
+  &__card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 
-      @media (min-width: 1024px) {
-        flex-wrap: nowrap; // Les 3 cartes en ligne sans retour à la ligne
-      }
-    }
-  
-    &__card {
-      min-width: 23rem;
-      margin: auto;
-      padding: 1rem;
-      border: 1px solid $beige;
-      border-radius: 30px;
-      background-color: $cream;
+  &__icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
 
-      @media (min-width: 768px) {
-        margin: auto;
-      }
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 
-      @media (min-width: 1024px) {
-        flex-wrap: nowrap; // Les 3 cartes en ligne sans retour à la ligne
-      }
-    }
-  
-    &__card-title {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
+  &__summary {
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    background-color: $cream;
+    border: 1px solid $beige;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    box-sizing: content-box;
+
+    &__icon-item {
+      box-sizing: content-box;
       text-align: center;
-    }
+  }
   
-    &__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-  
-    &__details {
-      margin-bottom: 0.5rem;
-      transition: all 0.3s ease-in-out;
 
-      // Effet de transition fluide
-      summary + * {
-        opacity: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: opacity 0.4s ease, max-height 0.4s ease-in-out;
-      }
-
-      &[open] {
-        .skills__summary {
-          background-color: $kaki;
-          color: $cream;
-        }
-
-        summary + * {
-          opacity: 1;
-          max-height: 500px; // Ajustable selon le contenu
-        }
-      }
-    }
-  
-    &__summary {
-      cursor: pointer;
-      font-size: 1.1rem;
-      padding: 0.8rem;
-      background-color: $cream;
-      border: 1px solid $beige;
-      border-radius: 30px;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
+    li {
+      display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      transition: background-color 0.3s ease, color 0.3s ease;
-
-      &:after {
-        content: "▼";
-        font-size: 1rem;
-        transition: transform 0.3s ease-in-out;
-      }
     }
 
-    &__details[open] &__summary:after {
-      transform: rotate(180deg); // Flèche vers le haut à l'ouverture
-    }
-  
-    &__icons {
-      display: flex;
-      gap: 10px;
-      margin-top: 0.5rem;
-      list-style: none;
-      padding: 0;
-  
-      li {
-        display: inline-block;
-      }
-  
-      img, svg {
-        width: 30px;
-        height: 30px;
-        aspect-ratio: 1 / 1;
-        object-fit: contain;
-      }
+    img, svg {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
     }
   }
+}
 
-  .button-download-cv {
-      margin: 1.5rem;
+.button-download-cv {
+  margin: 1.5rem;
 
-      @media (min-width: 768px) {
-        margin: 2rem;
-      }
-    
-      @media (min-width: 1024px) {
-        margin: 3.5rem;
-      }
-    
+  @media (min-width: 768px) {
+    margin: 2rem;
   }
+}

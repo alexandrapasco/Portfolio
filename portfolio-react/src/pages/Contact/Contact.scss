@@ -106,7 +106,8 @@
     display: block;
     width: 100%;
     margin-top: 1rem;
-    grid-column: span 2;
+    grid-column: span 1;
+    margin: auto;
   }
 
   /* --- INFOS DE CONTACT --- */
@@ -126,7 +127,7 @@
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1rem;
     }
   }
 

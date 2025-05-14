@@ -26,9 +26,28 @@
 
 .profile__content {
     max-width: 50rem;
+    max-height: 25rem;
     color: $black;
-    border-radius: 3vh;
-    margin: auto; // Centré par défaut sur mobile
+    margin: auto;
+    overflow-y: scroll; // 👈 scroll visible en permanence
+    padding-right: 1rem; // 👈 espace entre le texte et la scrollbar
+    box-sizing: border-box;
+
+    /* Scrollbar visible et plus accessible */
+    scrollbar-width: auto; /* Firefox */
+    
+    &::-webkit-scrollbar {
+      width: 12px; // 👈 plus large, plus visible
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $black;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: $cream;
+    }
 
     @media (min-width: 1024px) {
         max-width: 35%;
@@ -36,9 +55,19 @@
     }
 }
 
+
 .profile__text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 1.5rem 0 1.5rem 0;
+}
+
+.profile__a {
+    font-weight: bold;
+    color: $kaki;
+
+    &:hover {
+        color: $olive;
+    }
 }
 
 .profile__details {
