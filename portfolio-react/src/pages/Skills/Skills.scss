@@ -33,25 +33,34 @@
   }
 
   &__cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+  @media (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
   }
+}
 
-  &__card {
-    min-width: 23rem;
-    margin: auto;
-    padding: 1rem;
-    border: 1px solid $beige;
-    border-radius: 30px;
-    background-color: $cream;
+&__card {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  flex: 1 1 200px; 
+  padding: 1rem;
+  border: 1px solid $beige;
+  border-radius: 30px;
+  background-color: $cream;
+
+  @media (min-width: 768px) {
+    width: auto; 
   }
+}
+
 
   &__card-title {
     font-size: 1.4rem;
@@ -88,25 +97,33 @@
 
   &__icons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(1, 1fr); // mobile : 1 par ligne
     gap: 1rem;
     list-style: none;
     padding: 0;
     box-sizing: content-box;
 
-    &__icon-item {
-      box-sizing: content-box;
-      text-align: center;
-  }
-  
-
-    li {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr); // dès tablette : 3 colonnes
     }
 
-    img, svg {
+   
+  .social-icons svg {
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+  }
+
+    li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+
+    img,
+    svg {
       width: 30px;
       height: 30px;
       object-fit: contain;

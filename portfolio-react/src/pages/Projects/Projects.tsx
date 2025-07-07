@@ -3,9 +3,9 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { FaPlay, FaPause, FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import * as Icons from 'react-icons';
 import './Projects.scss';
 import projectsData from '../../../data/projects.json';
+import iconMap from './IconMap'; // ← import de la map
 
 function Projects() {
   const [autoplay, setAutoplay] = useState(true);
@@ -20,8 +20,7 @@ function Projects() {
     autoplaySpeed: 3000,
     arrows: true,
     prevArrow: <button className="projects__arrow slick-prev" aria-label="Précédent"><FaArrowLeft /></button>,
-    nextArrow: <button className="projects__arrow slick-next" aria-label="Suivant"><FaArrowRight /></button>,
-
+    nextArrow: <button className="projects__arrow slick-next" aria-label="Suivant"><FaArrowRight /></button>
   };
 
   const toggleAutoplay = () => setAutoplay(!autoplay);
@@ -31,7 +30,11 @@ function Projects() {
       <header className="projects__header">
         <h3 className="projects__title" id="contact">Vous voulez découvrir mes créations ?</h3>
         <h4 className="projects__subtitle">Découvrez mes projets, du développement web à la création visuelle !</h4>
-        <button className="projects__toggle" onClick={toggleAutoplay} aria-label={autoplay ? "Arrêter le défilement automatique" : "Reprendre le défilement automatique"}>
+        <button
+          className="projects__toggle"
+          onClick={toggleAutoplay}
+          aria-label={autoplay ? "Arrêter le défilement automatique" : "Reprendre le défilement automatique"}
+        >
           {autoplay ? <FaPause /> : <FaPlay />}
         </button>
       </header>
@@ -46,15 +49,12 @@ function Projects() {
                 <figcaption className="projects__description">{project.description}</figcaption>
               </figure>
               <section className="projects__tech">
-                {project.technologies.map((tech, idx) => {
-                  const IconComponent = Icons[tech.icon];
-                  return (
-                    <span key={idx} className="projects__tech-item" aria-label={tech.name}>
-                      {IconComponent && <IconComponent />}
-                      <p>{tech.name}</p>
-                    </span>
-                  );
-                })}
+                {project.technologies.map((tech, idx) => (
+                  <span key={idx} className="projects__tech-item" aria-label={tech.name}>
+                    {iconMap[tech.icon] ?? null}
+                    <p>{tech.name}</p>
+                  </span>
+                ))}
               </section>
             </article>
           ))}
