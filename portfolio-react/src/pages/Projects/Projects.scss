@@ -10,6 +10,10 @@
   &__header {
     margin-bottom: 3rem;
     margin-top: 2rem;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__toggle {
@@ -32,6 +36,7 @@
   &__content {
     width: 100%;
     padding: 0 1rem;
+    margin-bottom: 2rem;
 
     @media (min-width: 768px) {
       width: 90%;
@@ -54,15 +59,58 @@
     box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
     border-radius: 3vh;
 
+    // ___& Centrage horizontal et vertical dans le carousel
     .slick-slider,
     .slick-list,
     .slick-track {
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; // ← ajouté pour centrer horizontalement
     }
 
     .slick-slide {
       display: flex;
+      justify-content: center; // ← ajouté pour centrer chaque slide
+      align-items: center;
+      width: 100%;
+      text-align: center;
+
+      // Supprime le padding/margin automatique de slick
+      > div {
+        width: 100%;
+      }
+    }
+
+    // ✅ Petits points de navigation visibles
+    .slick-dots {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      display: flex;
       justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 0.5rem;
+
+      li {
+        button {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          border: none;
+          opacity: 0.5;
+
+          &:before {
+            display: none; // ← on cache le style par défaut
+          }
+        }
+
+        &.slick-active button {
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -84,8 +132,8 @@
     }
 
     @media (min-width: 1024px) {
-      justify-content: space-between;
-      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -97,17 +145,18 @@
     text-align: center;
 
     @media (min-width: 768px) {
-      text-align: left;
+      text-align: center;
     }
   }
 
-  figure {
+  &__figure {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    aspect-ratio: 1 / 1;
 
     @media (min-width: 768px) {
-      width: 45%;
+      width: 100%;
       margin: 0;
     }
   }
@@ -117,11 +166,19 @@
     height: auto;
     border-radius: 8px;
     display: block;
+    margin: 1rem 0 1rem 0rem;
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
   }
 
   &__description {
     color: $cream;
     text-align: center;
+    font-size: 1rem;
+
+    @media (min-width: 1024px) {
+      font-size: 1.2rem;
+    }
   }
 
   &__tech {
@@ -133,7 +190,7 @@
     margin-top: 1rem;
 
     @media (min-width: 768px) {
-      justify-content: flex-start;
+      justify-content: center;
     }
   }
 
@@ -142,28 +199,43 @@
     flex-direction: column;
     align-items: center;
     font-size: 0.85rem;
-    color: #222;
+    color: $black;
     padding: 0.8rem;
-    background-color: #FAEBC9;
-    border: 1px solid #CEB184;
+    background-color: $cream;
+    border: 1px solid $beige;
     border-radius: 30px;
-
-    svg {
-      font-size: 1.5rem;
-      margin-bottom: 0.25rem;
-    }
   }
 
-  &__arrow {
-    background: none;
-    border: none;
-    color: $cream;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 10;
+  // 🔧 Styles pour les flèches slick par défaut
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 100%;
+  background: $beige;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
-    &:hover {
-      color: $black;
-    }
+  &:hover {
+    background: $black;
   }
+}
+
+.slick-prev {
+  left: 1rem;
+}
+
+.slick-next {
+  right: 1rem;
+}
+
 }
