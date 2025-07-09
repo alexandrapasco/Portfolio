@@ -66,23 +66,21 @@
       width: 100%;
       display: flex;
       align-items: center;
-      justify-content: center; // ← ajouté pour centrer horizontalement
+      justify-content: center;
     }
 
     .slick-slide {
       display: flex;
-      justify-content: center; // ← ajouté pour centrer chaque slide
+      justify-content: center;
       align-items: center;
       width: 100%;
       text-align: center;
 
-      // Supprime le padding/margin automatique de slick
       > div {
         width: 100%;
       }
     }
 
-    // ✅ Petits points de navigation visibles
     .slick-dots {
       position: absolute;
       bottom: 1rem;
@@ -103,7 +101,7 @@
           opacity: 0.5;
 
           &:before {
-            display: none; // ← on cache le style par défaut
+            display: none;
           }
         }
 
@@ -206,36 +204,73 @@
     border-radius: 30px;
   }
 
-  // 🔧 Styles pour les flèches slick par défaut
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 100%;
-  background: $beige;
-  border: none;
-  width: 40px;
-  height: 40px;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-  cursor: pointer;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  // 🔧 Flèches slick
+  .slick-prev,
+  .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background: $beige;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
-  &:hover {
-    background: $black;
+    &:hover {
+      background: $black;
+    }
+  }
+
+  .slick-prev {
+    left: 1rem;
+  }
+
+  .slick-next {
+    right: 1rem;
+  }
+
+  // ✅ ___& Réseaux sociaux
+  &__links {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  &__social-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: $cream;
+  }
+
+  &__social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  &__social-link {
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:hover svg path {
+    fill: $olive !important;
   }
 }
 
-.slick-prev {
-  left: 1rem;
+// Appliquer la couleur par défaut en dehors du hover
+&__social-link svg path {
+  fill: $cream !important;
 }
-
-.slick-next {
-  right: 1rem;
-}
-
 }

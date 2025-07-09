@@ -39,19 +39,50 @@
     ]
   },
   {
+    "title": "Bénévolat Sensibilisation Identification",
+    "image": "/images/identification.png",
+    "description": "Post dédié aux réseaux sociaux avec texte et visuel pour l'association l'École des Chats du Pays Houdanais.",
+    "links": {
+    "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
+    "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
+    "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
+    "site": "https://ecole-des-chats.netlify.app/"
+  },
+    "technologies": [
+      { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
+      { "name": "Canva", "icon": "SiCanva" }
+    ]
+  },
+  {
+    "title": "Bénévolat Sensibilisation Stérilisation",
+    "image": "/images/sterilisation.png",
+    "description": "Post dédié aux réseaux sociaux avec texte et visuel pour l'association l'École des Chats du Pays Houdanais.",
+    "links": {
+    "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
+    "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
+    "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
+    "site": "https://ecole-des-chats.netlify.app/"
+  },
+    "technologies": [
+      { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
+      { "name": "Canva", "icon": "SiCanva" }
+    ]
+  },
+  {
     "title": "Padam Mobility Exercice 1",
-    "image": "/images/plan_communication_padam-mobility.png",
+    "image": "/images/padam-mobility1.png",
     "description": "Plan de communication réalisé pour l'entreprise Padam Mobility.",
     "technologies": [
-      { "name": "GoogleDrive", "icon": "GoogleDrive" }
+      { "name": "GoogleDrive", "icon": "SiGoogleDrive" }
     ]
   },
   {
     "title": "Padam Mobility Exercice 2",
-    "image": "/images/email_invitation_padam-mobility.png",
-    "description": "Email d'invitation à un évènement réalisé pour l'entreprise Padam Mobility.",
+    "image": "/images/padam-mobility2.png",
+    "description": "Email d'invitation à un évènement avec visuel réalisé pour l'entreprise Padam Mobility.",
     "technologies": [
-      { "name": "GoogleDrive", "icon": "GoogleDrive" }
+      { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
+      { "name": "Canva", "icon": "SiCanva" }
     ]
   },
   {
@@ -59,8 +90,8 @@
     "image": "/images/vedecom.png",
     "description": "Post LinkedIn avec visuel et texte d'un évènement de clôture pour l'entreprise Vedecom.",
     "technologies": [
-      { "name": "GoogleDrive", "icon": "GoogleDrive" },
-      { "name": "Canva", "icon": "Canva" }
+      { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
+      { "name": "Canva", "icon": "SiCanva" }
     ]
   }
 ]
