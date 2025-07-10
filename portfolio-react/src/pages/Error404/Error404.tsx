@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Error404.scss'; // ton style personnalisé
-import errorImage from '../../assets/images/404.png'; // ajuste le chemin selon ton projet
+// import errorImage from '../../assets/images/404.png'; // ajuste le chemin selon ton projet
 
 const Error404 = () => {
   return (
@@ -8,7 +8,7 @@ const Error404 = () => {
       <h1>404 - Page non trouvée</h1>
       <p>Oups ! La page que vous cherchez n'existe pas...</p>
       <img
-        src={errorImage}
+        //src={errorImage}
         alt="Illustration d'erreur 404"
         className="not-found__image"
       />
