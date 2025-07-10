@@ -79,14 +79,14 @@ function Profile() {
             >
               certification Opquast niveau avancé
             </a>
-            , je poursuis sur cette voie en préparant un 
+            , je poursuis sur cette voie en préparant un{' '}
             <a
               className="profile__a"
               href="https://www.iscod.fr/formation-bachelor-marketing-et-communication-en-alternance?"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Bachelor en Marketing & Communication chez ISCOD
+            > 
+               Bachelor en Marketing & Communication chez ISCOD
             </a>. Mon objectif ? Développer des stratégies digitales inclusives et percutantes, en
             restant fidèle à mes valeurs d’authenticité et de partage.
           </p>

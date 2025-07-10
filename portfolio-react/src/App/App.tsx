@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import './App.scss'; 
 import Header from "./components/Header/Header";
 import Brand from "./components/Brand/Brand";
 import About from "../pages/About/About";
@@ -7,6 +8,9 @@ import Projects from "../pages/Projects/Projects";
 import Contact from "../pages/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import Profile from "../pages/Profile/Profile";
+// import Error404 from "../pages/Error404/Error404";
+
+
 // import * as THREE from "three";
 import BIRDS from "vanta/dist/vanta.birds.min"; // Correction de l'import
 
@@ -27,9 +31,9 @@ export default function App() {
         el: document.body,
         mouseControls: true,
         touchControls: true,
-       gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
+        gyroControls: false,
+        minHeight: 1,
+        minWidth: 1,
         scale: 1.00,
         scaleMobile: 1.00,
         backgroundColor: 0xFAEBC9,

@@ -34,13 +34,6 @@ function Projects() {
       <header className="projects__header">
         <h3 className="projects__title" id="projects">Vous voulez découvrir mes créations ?</h3>
         <h4 className="projects__subtitle">Découvrez mes projets, du développement web à la création visuelle !</h4>
-        <button
-          className="projects__toggle"
-          onClick={toggleAutoplay}
-          aria-label={autoplay ? "Arrêter le défilement automatique" : "Reprendre le défilement automatique"}
-        >
-          {autoplay ? <FaPause /> : <FaPlay />}
-        </button>
       </header>
 
       <article className="projects__content" aria-live="polite">
@@ -96,6 +89,13 @@ function Projects() {
           ))}
         </Slider>
       </article>
+      <button
+          className="projects__toggle"
+          onClick={toggleAutoplay}
+          aria-label={autoplay ? "Arrêter le défilement automatique" : "Reprendre le défilement automatique"}
+        >
+          {autoplay ? <FaPause /> : <FaPlay />}
+        </button>
     </section>
   );
 }

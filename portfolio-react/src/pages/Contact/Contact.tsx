@@ -23,7 +23,7 @@ function Contact() {
       });
 
       if (response.ok) {
-        setStatusMessage('✅ Merci pour votre message ! Je vous répondrai rapidement.');
+        setStatusMessage('Merci pour votre message ! ✅ Je vous répondrai rapidement.');
         form.reset();
       } else {
         const data = await response.json();
