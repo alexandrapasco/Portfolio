@@ -1,11 +1,16 @@
+// src/components/Footer/Footer.jsx
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Footer.scss';
 
 function Footer() {
-    return (
-      <footer>2024 Alexandra Pasco © Tous droits réservés</footer> 
-    );
-  }
-  
-  export default Footer;
+  const { t } = useTranslation();
 
+  return (
+    <footer>
+      {t('footer.copyright')}
+    </footer>
+  );
+}
+
+export default Footer;

@@ -1,31 +1,26 @@
+body.body-error {
+    background-color: $kaki;
+  }
+
 .not-found {
   text-align: center;
   padding: 4rem 1rem;
-  color: #333;
-
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
+  color: $cream;
 
   &__image {
     max-width: 300px;
     width: 100%;
     margin-bottom: 2rem;
+    margin: auto;
   }
 
   &__link {
     font-weight: bold;
-    color: #007acc;
+    color: $cream;
     text-decoration: underline;
 
     &:hover {
-      color: #005fa3;
+      color: $olive;
     }
   }
 }

@@ -1,33 +1,25 @@
 import './Profile.scss';
+import { useTranslation } from 'react-i18next';
 
 function Profile() {
+  const { t } = useTranslation();
+
   return (
     <section className="profile section-anchor" aria-labelledby="profile">
       <header className="profile__header">
-        <h3 className="profile__title" id="profile">Qui suis-je ?</h3>
-        <h4 className="profile__subtitle">
-          Observer, comprendre, créer : ma vision du web.
-        </h4>
+        <h3 className="profile__title" id="profile">{t('profile.title')}</h3>
+        <h4 className="profile__subtitle">{t('profile.subtitle')}</h4>
       </header>
 
       <aside className="profile__details">
         <article className="profile__content">
-          <h5 className="profile__tagline">Un parcours riche, atypique et authentique</h5>
-          <p className="profile__text">
-            Je n'ai jamais eu un parcours tout tracé. J'ai exploré différents univers : d'abord
-            photographe et comédienne, puis responsable en restauration. À chaque étape, l'humain a
-            toujours été au cœur des échanges.
-          </p>
+          <h5 className="profile__tagline">{t('profile.tagline')}</h5>
+
+          <p className="profile__text">{t('profile.p1')}</p>
+          <p className="profile__text">{t('profile.p2')}</p>
 
           <p className="profile__text">
-            Ces expériences m’ont permis de faire ressortir mon sens de l’écoute, de l’observation
-            et de l’empathie — des qualités que j’applique aujourd’hui au développement web et à la
-            gestion de communautés en ligne. Ce que j'aime, c'est créer des interfaces belles et
-            accessibles, et concevoir des contenus qui parlent aux gens et les sensibilisent.
-          </p>
-
-          <p className="profile__text">
-            C'est en devenant bénévole pour l'association {' '}
+            {t('profile.p3a')}
             <a
               className="profile__a"
               href="https://ecole-des-chats.netlify.app/"
@@ -35,10 +27,8 @@ function Profile() {
               rel="noopener noreferrer"
             >
               l'École des Chats du Pays Houdanais
-            </a>{' '}
-            que j'ai découvert le community management. J'ai commencé par accueillir des chats
-            traumatisés pour leur redonner confiance, puis on m'a confié la gestion des réseaux
-            sociaux de l'association (
+            </a>
+            {t('profile.p3b')}
             <a
               className="profile__a"
               href="https://www.facebook.com/profile.php?id=61561436403399"
@@ -65,12 +55,11 @@ function Profile() {
             >
               LinkedIn
             </a>
-            ). J’ai adoré imaginer des visuels, écrire des textes optimisés, et surtout voir l’impact
-            de mes publications. Ça m’a donné envie de faire ce métier !
+            {t('profile.p3c')}
           </p>
 
           <p className="profile__text">
-            Aujourd’hui diplômée du Titre Professionnel de niveau 5 (Bac+2) "Développeur Web & Web Mobile" avec une{' '}
+            {t('profile.p4a')}
             <a
               className="profile__a"
               href="https://oqs.li/O7GZC8"
@@ -79,28 +68,20 @@ function Profile() {
             >
               certification Opquast niveau avancé
             </a>
-            , je poursuis sur cette voie en préparant un{' '}
+            {t('profile.p4b')}
             <a
               className="profile__a"
               href="https://www.iscod.fr/formation-bachelor-marketing-et-communication-en-alternance?"
               target="_blank"
               rel="noopener noreferrer"
-            > 
-               Bachelor en Marketing & Communication chez ISCOD
-            </a>. Mon objectif ? Développer des stratégies digitales inclusives et percutantes, en
-            restant fidèle à mes valeurs d’authenticité et de partage.
+            >
+              Bachelor en Marketing & Communication chez ISCOD
+            </a>
+            {t('profile.p4c')}
           </p>
 
-          <p className="profile__text">
-            Mon regard attentif me pousse à imaginer des solutions inclusives, tandis que ma
-            créativité donne vie à des interfaces fluides et engageantes. Pour moi, le web est un
-            terrain d’expression où technologie et sensibilité se rencontrent.
-          </p>
-
-          <p className="profile__text">
-            Je recherche donc une alternance pour continuer à apprendre et à évoluer dans ce
-            domaine !
-          </p>
+          <p className="profile__text">{t('profile.p5')}</p>
+          <p className="profile__text">{t('profile.p6')}</p>
         </article>
 
         <figure className="profile__profile">

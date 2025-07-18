@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "profile": "Profile",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "brand": {
+    "title": "Alexandra Pasco",
+    "subtitle": "Full-Stack Web Developer",
+    "search": "Looking for a 12-month professional training contract",
+    "degree": "Preparing a Bachelor's degree in Communication & Marketing",
+    "rhythm": "Schedule: 4 days in company / 1 day in class"
+  },
+  "about": {
+    "tagline": "Inclusive and visible, but not without style",
+    "paragraph1": "Why should an accessible website be boring? People with visual impairments or other disabilities deserve to enjoy a beautiful, intuitive, and pleasant web experience too.",
+    "paragraph2": "Yet many sites neglect these aspects: autoplay sliders you can't stop, poorly chosen colors, buttons that can't be found… What if we did better?",
+    "paragraph3": "For me, accessibility and design are not opposites—they complement each other. A website can be beautiful, well-ranked, and most importantly, made for everyone.",
+    "paragraph4": "This inclusive and creative vision of the web is what drives me, and what I aim to bring to every one of my projects.",
+    "button": "Learn more"
+  },
+  "profile": {
+  "title": "Who am I?",
+  "subtitle": "Observe, understand, create: my vision of the web.",
+  "tagline": "A rich, atypical, and authentic journey",
+  "p1": "I've never had a straightforward path. I've explored different worlds: first as a photographer and actress, then as a restaurant manager. At every stage, human connection has always been at the heart of it all.",
+  "p2": "These experiences have brought out my listening skills, observation, and empathy — qualities I now apply to web development and online community management. What I love is creating beautiful and accessible interfaces and designing content that speaks to people and raises awareness.",
+  "p3a": "It was by volunteering for the association ",
+  "p3b": " that I discovered community management. I started by welcoming traumatized cats to help them regain trust, then I was entrusted with managing the association's social networks (",
+  "p3c": "). I loved creating visuals, writing optimized texts, and especially seeing the impact of my posts. That’s when I knew I wanted to pursue this career!",
+  "p4a": "Now certified with a Level 5 (Bac+2) Professional Title in \"Web & Mobile Web Developer\" and an ",
+  "p4b": ", I’m continuing down this path by studying for a ",
+  "p4c": ". My goal? To develop inclusive and impactful digital strategies while staying true to my values of authenticity and sharing.",
+  "p5": "My attentive mindset pushes me to imagine inclusive solutions, while my creativity brings fluid and engaging interfaces to life. For me, the web is a space where technology and sensitivity meet.",
+  "p6": "I am therefore looking for a work-study position to continue learning and growing in this field!"
+},
+  "skills": {
+    "title": "What are my strengths?",
+    "subtitle": "My knowledge and powers to create and innovate.",
+    "hard": "Hard Skills",
+    "tools": "Tools",
+    "soft": "Soft Skills",
+    "cv": "Download CV",
+    "social": "Social",
+    "list": {
+      "organisation": "Organization",
+      "empathy": "Empathy",
+      "creativity": "Creativity",
+      "curiosity": "Curiosity",
+      "communication": "Communication",
+      "autonomy": "Autonomy",
+      "versatility": "Versatility",
+      "collaboration": "Collaboration"
+    }
+  },
+  "contact": {
+  "title": "Would you like to contact me?",
+  "subtitle": "A question, a project, a collaboration? Let’s write the next chapter together!",
+  "required": "Fields marked with an asterisk (*) are required.",
+  "lastname": "Last name",
+  "firstname": "First name",
+  "email": "Email",
+  "phone": "Phone",
+  "subject": "Subject",
+  "message": "Message",
+  "send": "Send",
+  "sending": "Sending...",
+  "success": "Thanks for your message! ✅ I will reply shortly.",
+  "error": "❌ An error occurred, please try again.",
+  "network": "❌ Network error. Please try again later.",
+  "contactInfo": {
+    "phone": "06.29.32.08.48",
+    "email": "s.alexandra.pasco@gmail.com",
+    "linkedin": "alexandrapasco",
+    "github": "alexandrapasco",
+    "location": "78120 Rambouillet"
+  }
+},
+  "projects": {
+    "title": "Want to discover my creations?",
+    "subtitle": "Explore my projects, from web development to visual design!",
+    "prev": "Previous",
+    "next": "Next",
+    "stopAutoplay": "Stop automatic scrolling",
+    "startAutoplay": "Resume automatic scrolling",
+    "socialTitle": "Social media:",
+    "items": [
+      {
+        "title": "Portfolio",
+        "description": "Showcase site presenting my projects and skills — it’s my business card."
+      },
+      {
+        "title": "CinéDélices",
+        "description": "A platform for sharing recipes inspired by various movies & series — a collaborative project."
+      },
+      {
+        "title": "Hercule",
+        "description": "Training project to master mobile-first and responsive design."
+      },
+      {
+        "title": "O'Coffee",
+        "description": "Training project: a showcase website for coffee shop owners."
+      },
+      {
+        "title": "Volunteering – Awareness: Identification",
+        "description": "Social media post with text and visuals for the association 'L'École des Chats du Pays Houdanais'."
+      },
+      {
+        "title": "Volunteering – Awareness: Sterilization",
+        "description": "Social media post with text and visuals for the association 'L'École des Chats du Pays Houdanais'."
+      },
+      {
+        "title": "Padam Mobility Exercise 1",
+        "description": "Communication plan created for the company Padam Mobility."
+      },
+      {
+        "title": "Padam Mobility Exercise 2",
+        "description": "Event invitation email and visual created for the company Padam Mobility."
+      },
+      {
+        "title": "Vedecom Exercise",
+        "description": "LinkedIn post with visual and text for a closing event at Vedecom."
+      }
+    ]
+  },
+  "footer": {
+  "copyright": "2024 Alexandra Pasco © All rights reserved"
+},
+"error": {
+  "aria": "Page not found",
+  "title": "404 - Page not found",
+  "text": "Oops! The page you are looking for does not exist...",
+  "imageAlt": "404 error illustration",
+  "backHome": "Back to home"
+}
+}
+
+

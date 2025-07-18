@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "profile": "Profil",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "brand": {
+    "title": "Alexandra Pasco",
+    "subtitle": "Développeur Web Full-Stack",
+    "search": "Cherche alternance en contrat de professionnalisation sur 12 mois",
+    "degree": "Préparation d'un Bachelor en Communication & Marketing",
+    "rhythm": "Rythme : 4 jours en entreprise / 1 jour de formation"
+  },
+  "about": {
+    "tagline": "Inclusif et visible, mais pas sans style",
+    "paragraph1": "Pourquoi un site accessible devrait-il être ennuyeux ? Les personnes malvoyantes, ou avec d’autres handicaps, ont autant le droit de profiter d’un web joli, intuitif et agréable.",
+    "paragraph2": "Pourtant, beaucoup de sites négligent ces aspects : des slides automatiques impossibles à stopper, des couleurs mal choisies, des boutons introuvables… Et si on faisait mieux ?",
+    "paragraph3": "Pour moi, l’accessibilité et le design ne sont pas opposés : ils se complètent. Un site peut être beau, bien référencé, et surtout, pensé pour tous.",
+    "paragraph4": "C’est cette vision inclusive et créative du web qui me passionne, et que je veux transmettre dans chacun de mes projets.",
+    "button": "En savoir plus"
+  },
+  "profile": {
+  "title": "Qui suis-je ?",
+  "subtitle": "Observer, comprendre, créer : ma vision du web.",
+  "tagline": "Un parcours riche, atypique et authentique",
+  "p1": "Je n'ai jamais eu un parcours tout tracé. J'ai exploré différents univers : d'abord photographe et comédienne, puis responsable en restauration. À chaque étape, l'humain a toujours été au cœur des échanges.",
+  "p2": "Ces expériences m’ont permis de faire ressortir mon sens de l’écoute, de l’observation et de l’empathie — des qualités que j’applique aujourd’hui au développement web et à la gestion de communautés en ligne. Ce que j'aime, c'est créer des interfaces belles et accessibles, et concevoir des contenus qui parlent aux gens et les sensibilisent.",
+  "p3a": "C'est en devenant bénévole pour l'association ",
+  "p3b": " que j'ai découvert le community management. J'ai commencé par accueillir des chats traumatisés pour leur redonner confiance, puis on m'a confié la gestion des réseaux sociaux de l'association (",
+  "p3c": "). J’ai adoré imaginer des visuels, écrire des textes optimisés, et surtout voir l’impact de mes publications. Ça m’a donné envie de faire ce métier !",
+  "p4a": "Aujourd’hui diplômée du Titre Professionnel de niveau 5 (Bac+2) \"Développeur Web & Web Mobile\" avec une ",
+  "p4b": ", je poursuis sur cette voie en préparant un ",
+  "p4c": ". Mon objectif ? Développer des stratégies digitales inclusives et percutantes, en restant fidèle à mes valeurs d’authenticité et de partage.",
+  "p5": "Mon regard attentif me pousse à imaginer des solutions inclusives, tandis que ma créativité donne vie à des interfaces fluides et engageantes. Pour moi, le web est un terrain d’expression où technologie et sensibilité se rencontrent.",
+  "p6": "Je recherche donc une alternance pour continuer à apprendre et à évoluer dans ce domaine !"
+},
+  "skills": {
+    "title": "Quels sont mes atouts ?",
+    "subtitle": "Mes savoirs et mes pouvoirs pour créer et innover.",
+    "hard": "Hard Skills",
+    "tools": "Outils",
+    "soft": "Soft Skills",
+    "cv": "Télécharger le CV",
+    "social": "Social",
+    "list": {
+      "organisation": "Organisation",
+      "empathy": "Empathie",
+      "creativity": "Créativité",
+      "curiosity": "Curiosité",
+      "communication": "Communication",
+      "autonomy": "Autonomie",
+      "versatility": "Polyvalence",
+      "collaboration": "Collaboration"
+    }
+  },
+  "contact": {
+  "title": "Vous souhaitez me contacter ?",
+  "subtitle": "Une question, un projet, une collaboration ? Écrivons la suite ensemble !",
+  "required": "Les champs marqués d’un astérisque (*) sont obligatoires.",
+  "lastname": "Nom",
+  "firstname": "Prénom",
+  "email": "E-mail",
+  "phone": "Téléphone",
+  "subject": "Objet",
+  "message": "Message",
+  "send": "Envoyer",
+  "sending": "Envoi en cours...",
+  "success": "Merci pour votre message ! ✅ Je vous répondrai rapidement.",
+  "error": "❌ Une erreur est survenue, veuillez réessayer.",
+  "network": "❌ Erreur réseau. Veuillez réessayer plus tard.",
+  "contactInfo": {
+    "phone": "06.29.32.08.48",
+    "email": "s.alexandra.pasco@gmail.com",
+    "linkedin": "alexandrapasco",
+    "github": "alexandrapasco",
+    "location": "78120 Rambouillet"
+  }
+},
+  "projects": {
+    "title": "Vous voulez découvrir mes créations ?",
+    "subtitle": "Découvrez mes projets, du développement web à la création visuelle !",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "stopAutoplay": "Arrêter le défilement automatique",
+    "startAutoplay": "Reprendre le défilement automatique",
+    "socialTitle": "Réseaux sociaux :",
+    "items": [
+      {
+        "title": "Portfolio",
+        "description": "Site vitrine présentant mes projets et compétences, c'est ma carte de visite."
+      },
+      {
+        "title": "CinéDélices",
+        "description": "Plateforme de partage de recettes inspirées de divers films & séries, projet collaboratif."
+      },
+      {
+        "title": "Hercule",
+        "description": "Projet de formation pour maitriser le mobile-first et responsive."
+      },
+      {
+        "title": "O'Coffee",
+        "description": "Projet de formation site vitrine pour des commerçants de café."
+      },
+      {
+        "title": "Bénévolat Sensibilisation Identification",
+        "description": "Post dédié aux réseaux sociaux avec texte et visuel pour l'association l'École des Chats du Pays Houdanais."
+      },
+      {
+        "title": "Bénévolat Sensibilisation Stérilisation",
+        "description": "Post dédié aux réseaux sociaux avec texte et visuel pour l'association l'École des Chats du Pays Houdanais."
+      },
+      {
+        "title": "Padam Mobility Exercice 1",
+        "description": "Plan de communication réalisé pour l'entreprise Padam Mobility."
+      },
+      {
+        "title": "Padam Mobility Exercice 2",
+        "description": "Email d'invitation à un évènement avec visuel réalisé pour l'entreprise Padam Mobility."
+      },
+      {
+        "title": "Vedecom Exercice",
+        "description": "Post LinkedIn avec visuel et texte d'un évènement de clôture pour l'entreprise Vedecom."
+      }
+    ]
+  },
+  "footer": {
+  "copyright": "2024 Alexandra Pasco © Tous droits réservés"
+},
+"error": {
+  "aria": "Page non trouvée",
+  "title": "404 - Page non trouvée",
+  "text": "Oups ! La page que vous cherchez n'existe pas...",
+  "imageAlt": "Illustration d'erreur 404",
+  "backHome": "Retour à l’accueil"
+}
+}
+
+

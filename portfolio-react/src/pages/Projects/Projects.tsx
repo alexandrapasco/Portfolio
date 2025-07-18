@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import './Projects.scss';
 import projectsData from '../../../data/projects.json';
-import iconMap from './IconMap'; // ← map des icônes
+import iconMap from './IconMap';
 
 function Projects() {
+  const { t } = useTranslation();
   const [autoplay, setAutoplay] = useState(true);
 
   const settings = {
@@ -20,10 +22,10 @@ function Projects() {
     autoplaySpeed: 3000,
     arrows: true,
     prevArrow: (
-      <button className="projects__arrow slick-prev" aria-label="Précédent" />
+      <button className="projects__arrow slick-prev" aria-label={t('projects.prev')} />
     ),
     nextArrow: (
-      <button className="projects__arrow slick-next" aria-label="Suivant" />
+      <button className="projects__arrow slick-next" aria-label={t('projects.next')} />
     ),
   };
 
@@ -32,18 +34,18 @@ function Projects() {
   return (
     <section className="projects section-anchor" aria-labelledby="projects">
       <header className="projects__header">
-        <h3 className="projects__title" id="projects">Vous voulez découvrir mes créations ?</h3>
-        <h4 className="projects__subtitle">Découvrez mes projets, du développement web à la création visuelle !</h4>
+        <h3 className="projects__title" id="projects">{t('projects.title')}</h3>
+        <h4 className="projects__subtitle">{t('projects.subtitle')}</h4>
       </header>
 
       <article className="projects__content" aria-live="polite">
         <Slider {...settings} className="projects__carousel">
           {projectsData.map((project, index) => (
             <article key={index} className="projects__slide">
-              <h5 className="projects__project-title">{project.title}</h5>
+              <h5 className="projects__project-title">{t(`projects.items.${index}.title`)}</h5>
               <figure>
                 <img src={project.image} alt={project.title} className="projects__image" />
-                <figcaption className="projects__description">{project.description}</figcaption>
+                <figcaption className="projects__description">{t(`projects.items.${index}.description`)}</figcaption>
               </figure>
 
               <section className="projects__tech">
@@ -57,14 +59,14 @@ function Projects() {
 
               {project.links && (
                 <section className="projects__links">
-                  <h6 className="projects__social-title">Réseaux sociaux :</h6>
+                  <h6 className="projects__social-title">{t('projects.socialTitle')}</h6>
                   <span className="projects__social-icons">
                     {Object.entries(project.links).map(([key, url]) => {
                       const iconKey = {
                         facebook: 'FaFacebook',
                         instagram: 'FaInstagram',
                         linkedin: 'FaLinkedin',
-                        site: null, // tu peux gérer une autre icône ici si tu veux
+                        site: null
                       }[key];
 
                       return (
@@ -90,12 +92,12 @@ function Projects() {
         </Slider>
       </article>
       <button
-          className="projects__toggle"
-          onClick={toggleAutoplay}
-          aria-label={autoplay ? "Arrêter le défilement automatique" : "Reprendre le défilement automatique"}
-        >
-          {autoplay ? <FaPause /> : <FaPlay />}
-        </button>
+        className="projects__toggle"
+        onClick={toggleAutoplay}
+        aria-label={autoplay ? t('projects.stopAutoplay') : t('projects.startAutoplay')}
+      >
+        {autoplay ? <FaPause /> : <FaPlay />}
+      </button>
     </section>
   );
 }
