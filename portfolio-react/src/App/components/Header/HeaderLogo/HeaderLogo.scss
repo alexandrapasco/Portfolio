@@ -1,11 +1,27 @@
 .header__logo {
-    margin: 1rem 0;
-  
+  padding: 0 1rem;
+  flex-shrink: 0; // ⚠️ très important : empêche le logo de rétrécir dans les flex
+
+  &-img {
+    width: 4rem; // Taille par défaut pour mobile
+    height: auto;
+    border-radius: 100%;
+    border: 1px solid $cream;
+    min-width: 3.5rem;
+    min-height: 3.5rem;
+  }
+
+  // Pour les écrans un peu plus grands (tablettes et +)
+  @media (min-width: 480px) {
     &-img {
       width: 5rem;
-      height: auto;
-      border-radius: 100%;
-      border: 1px solid $cream;
     }
   }
-  
+
+  // Sur les ordis, on garde une taille plus confortable
+  @media (min-width: 768px) {
+    &-img {
+      width: 5.5rem;
+    }
+  }
+}

@@ -7,6 +7,8 @@ function Contact() {
   const { t } = useTranslation();
   const [statusMessage, setStatusMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  type FormspreeError = { message: string };
+
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,7 +32,9 @@ function Contact() {
       } else {
         const data = await response.json();
         if (data.errors) {
-          setStatusMessage(`❌ ${data.errors.map((error: any) => error.message).join(', ')}`);
+          // setStatusMessage(`❌ ${data.errors.map((error: any) => error.message).join(', ')}`);
+          setStatusMessage(`❌ ${data.errors.map((error: FormspreeError) => error.message).join(', ')}`);
+
         } else {
           setStatusMessage(t('contact.error'));
         }
@@ -111,13 +115,13 @@ function Contact() {
             <textarea className="contact__textarea" id="message" name="message" rows={5}></textarea>
           </fieldset>
 
-          <div aria-live="polite" className="contact__error">
-            {statusMessage && <p>{statusMessage}</p>}
-          </div>
-
           <Button className="contact__button" disabled={isSubmitting}>
             {isSubmitting ? t('contact.sending') : t('contact.send')}
           </Button>
+
+          <span aria-live="polite" className="contact__error">
+            {statusMessage && <p>{statusMessage}</p>}
+          </span>
         </form>
 
         <aside className="contact__info">

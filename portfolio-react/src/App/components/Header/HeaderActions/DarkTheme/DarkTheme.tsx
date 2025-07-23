@@ -20,6 +20,7 @@ const DarkTheme: React.FC<DarkThemeProps> = ({ isDarkMode, toggleDarkMode }) => 
       className={`dark-mode-toggle ${isRotated ? 'rotated' : ''}`}
       onClick={handleClick}
       aria-label={isDarkMode ? 'Désactiver le mode sombre' : 'Activer le mode sombre'}
+      title="Afficher le Dark/Light Mode"
     >
       {isDarkMode ? (
         <FaSun className="icon sun" size={30} />

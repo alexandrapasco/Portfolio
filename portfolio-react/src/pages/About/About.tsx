@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Button from '../../App/components/Button/Button';
 import '../../App/components/Button/Button.scss';
 import './About.scss';

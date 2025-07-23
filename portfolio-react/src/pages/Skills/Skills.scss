@@ -7,9 +7,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
   margin: auto;
+
+  @media (min-width: 768px) {
+    padding: 2rem; // ✅ remets 2rem sur tablette
+  }
 
   &__header {
     margin-top: 3rem;

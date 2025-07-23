@@ -15,19 +15,26 @@
 }
 
 .about__content {
-    padding: 2rem;
-    background-color: $cream;
-    color: $black;
-    box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
-    font-size: 1.1rem;
-    border-radius: 3vh;
-    margin: auto;
+  width: 100%;
+  padding: 1.5rem; // ✅ padding plus petit par défaut (mobile)
+  box-sizing: border-box; // ✅ pour inclure le padding dans le 100%
+  margin: 0 auto;
+  background-color: $cream;
+  color: $black;
+  box-shadow: 0.2em 0.2em 1.2em 0.9em rgba(0, 0, 0, 0.25);
+  font-size: 1.1rem;
+  border-radius: 3vh;
 
-    @media (min-width: 1024px) {
-        max-width: 40%;
-        margin-right: 5rem;
-    }
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 40%;
+    margin-right: 5rem;
+  }
 }
+
 
 .about__text {
     margin: 1.5rem 0 1.5rem 0;

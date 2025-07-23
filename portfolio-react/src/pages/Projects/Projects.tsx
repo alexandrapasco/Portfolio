@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+
 import { useTranslation } from 'react-i18next';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';

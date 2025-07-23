@@ -28,6 +28,7 @@ const LanguageSwitcher: React.FC = () => {
           ? 'Switch site to English'
           : 'Passer le site en français'
       }
+      title="Switcher de langue FR/EN"
     >
       {i18n.language === 'fr' ? (
         <FaGlobeAmericas className="icon" size={30} />
