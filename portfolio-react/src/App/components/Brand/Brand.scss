@@ -1,16 +1,23 @@
 .brand {
   text-align: center;
   padding: 2rem;
-
+  background-color: transparent;
+  
   &__title {
     font-size: 2.5rem;
     font-weight: bold;
     color: $black;
+    position: relative;
+    z-index: 1;
+
   }
 
   &__subtitle {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+
   }
 
   &__paragraph {
@@ -23,5 +30,9 @@
       vertical-align: middle;
       color: $black; // ou une autre couleur si tu veux les icônes visibles
     }
+
+    body.dark-mode & {
+    background-color: transparent; // <== encore plus sûr en dark mode
+  }
   }
 }

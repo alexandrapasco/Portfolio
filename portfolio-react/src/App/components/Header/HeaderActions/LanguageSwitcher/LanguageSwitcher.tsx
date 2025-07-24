@@ -1,12 +1,10 @@
-// src/components/HeaderActions/LanguageSwitcher/LanguageSwitcher.tsx
-
 import React, { useState, useEffect } from 'react';
 import { FaGlobeEurope, FaGlobeAmericas } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './LanguageSwitcher.scss';
 
 const LanguageSwitcher: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [isRotated, setIsRotated] = useState(false);
 
   useEffect(() => {
@@ -19,18 +17,16 @@ const LanguageSwitcher: React.FC = () => {
     i18n.changeLanguage(newLang);
   };
 
+  const isFrench = i18n.language === 'fr';
+
   return (
     <button
       className={`language-toggle ${isRotated ? 'rotated' : ''}`}
       onClick={toggleLanguage}
-      aria-label={
-        i18n.language === 'fr'
-          ? 'Switch site to English'
-          : 'Passer le site en français'
-      }
-      title="Switcher de langue FR/EN"
+      aria-label={t(isFrench ? 'tooltip.langToEn' : 'tooltip.langToFr')}
+      title={t(isFrench ? 'tooltip.langToEn' : 'tooltip.langToFr')}
     >
-      {i18n.language === 'fr' ? (
+      {isFrench ? (
         <FaGlobeAmericas className="icon" size={30} />
       ) : (
         <FaGlobeEurope className="icon" size={30} />

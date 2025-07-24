@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
 import './DarkTheme.scss';
+import { useTranslation } from 'react-i18next';
 
 interface DarkThemeProps {
   isDarkMode: boolean;
@@ -9,18 +10,19 @@ interface DarkThemeProps {
 
 const DarkTheme: React.FC<DarkThemeProps> = ({ isDarkMode, toggleDarkMode }) => {
   const [isRotated, setIsRotated] = useState(false);
+  const { t } = useTranslation();
 
   const handleClick = () => {
-    setIsRotated(!isRotated); // Alterne la rotation
-    toggleDarkMode(); // Active/Désactive le mode sombre
+    setIsRotated(!isRotated);
+    toggleDarkMode();
   };
 
   return (
     <button
       className={`dark-mode-toggle ${isRotated ? 'rotated' : ''}`}
       onClick={handleClick}
-      aria-label={isDarkMode ? 'Désactiver le mode sombre' : 'Activer le mode sombre'}
-      title="Afficher le Dark/Light Mode"
+      aria-label={t(isDarkMode ? 'tooltip.modeOff' : 'tooltip.modeOn')}
+      title={t(isDarkMode ? 'tooltip.modeOff' : 'tooltip.modeOn')}
     >
       {isDarkMode ? (
         <FaSun className="icon sun" size={30} />

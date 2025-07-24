@@ -1,7 +1,27 @@
+@use "./variables" as *;
+
 body.dark-mode {
   // color: #ffffff;
 
-  header {
-    background-color: #440a58;
+  .header {
+    background-color: $black;
+    opacity: 90%;
+    box-shadow: 0 4px 4px -2px rgba(255, 242, 217, 0.997);
+  }
+
+  .brand__paragraph, .contact__title, .contact__subtitle {
+    color: $black;
+  }
+
+  .about__content, .profile, .skills__header, .skills__card, .projects, .contact__container, .projects__tech-item {
+    background-color: $black;
+  }
+
+  h1, h2, h3, h4, h5, p, .brand__paragraph, .about__text, .profile__header, .profile__text, .contact__label, .contact__text {
+    color: $cream;
+  }
+
+  .profile__photo, button {
+    border: 1px solid $cream;
   }
 }

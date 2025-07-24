@@ -133,6 +133,20 @@
   "text": "Oups ! La page que vous cherchez n'existe pas...",
   "imageAlt": "Illustration d'erreur 404",
   "backHome": "Retour à l’accueil"
+},
+"tooltip": {
+  "mode": "Passer au mode Sombre/Clair",
+  "modeOn": "Activer le mode sombre",
+  "modeOff": "Désactiver le mode sombre",
+  "langage": "Passer au language EN/FR",
+  "langToEn": "Passer le site en anglais",
+  "langToFr": "Passer le site en français",
+  "home": "Retour à l'accueil",
+  "phone": "Appeler",
+  "email": "Envoyer un e-mail",
+  "linkedin": "Voir mon profil LinkedIn",
+  "github": "Voir mon GitHub",
+  "map": "Localisation"
 }
 }
 

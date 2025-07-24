@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+// src/components/Header/HeaderHome/HeaderHome.tsx
+
+import { useState } from 'react';
 import { FaHome } from 'react-icons/fa';
 import './HeaderHome.scss';
+import { useTranslation } from 'react-i18next';
 
 interface HeaderHomeProps {
   className?: string;
@@ -9,6 +12,10 @@ interface HeaderHomeProps {
 function HeaderHome({ className }: HeaderHomeProps) {
   const [rotated, setRotated] = useState(false);
 
+  // 🔁 Hook pour accéder aux traductions
+  const { t } = useTranslation();
+
+  // 🔄 Animation quand on clique sur l'icône
   const handleClick = () => {
     setRotated(true);
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -20,8 +27,8 @@ function HeaderHome({ className }: HeaderHomeProps) {
       <button
         onClick={handleClick}
         className={`header__home-button ${rotated ? 'rotated' : ''}`}
-        aria-label="Retour à l'accueil"
-        title="Retour à l'accueil"
+        aria-label={t('tooltip.home')}  // accessibilité
+        title={t('tooltip.home')}       // infobulle au survol
       >
         <FaHome className="header__home-icon" size={30} />
       </button>

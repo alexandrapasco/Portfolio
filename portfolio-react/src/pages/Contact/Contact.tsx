@@ -1,3 +1,11 @@
+import {
+  FaPhone,
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
+
 import { useState } from 'react';
 import Button from '../../App/components/Button/Button';
 import './Contact.scss';
@@ -8,7 +16,6 @@ function Contact() {
   const [statusMessage, setStatusMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   type FormspreeError = { message: string };
-
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,9 +39,7 @@ function Contact() {
       } else {
         const data = await response.json();
         if (data.errors) {
-          // setStatusMessage(`❌ ${data.errors.map((error: any) => error.message).join(', ')}`);
           setStatusMessage(`❌ ${data.errors.map((error: FormspreeError) => error.message).join(', ')}`);
-
         } else {
           setStatusMessage(t('contact.error'));
         }
@@ -127,32 +132,69 @@ function Contact() {
         <aside className="contact__info">
           <ul className="contact__list">
             <li className="contact__item">
-              <a href="tel:0629320848">
-                <img className="contact__icon" src="/icons/phone.svg" alt="Icône téléphone" />
+              <a href="tel:0629320848" className="contact__link">
+                <FaPhone 
+                className="contact__icon contact__icon--phone" 
+                aria-hidden="true"
+                aria-label={t('tooltip.phone')}  // accessibilité
+                title={t('tooltip.phone')} 
+                />
                 <span className="contact__text">{t('contact.contactInfo.phone')}</span>
               </a>
             </li>
             <li className="contact__item">
-              <a href="mailto:s.alexandra.pasco@gmail.com">
-                <img className="contact__icon" src="/icons/email.svg" alt="Icône email" />
+              <a href="mailto:s.alexandra.pasco@gmail.com" className="contact__link">
+                <FaEnvelope 
+                className="contact__icon" 
+                aria-hidden="true"
+                aria-label={t('tooltip.email')}  // accessibilité
+                title={t('tooltip.email')}
+                 />
                 <span className="contact__text">{t('contact.contactInfo.email')}</span>
               </a>
             </li>
             <li className="contact__item">
-              <a href="https://linkedin.com/in/alexandrapasco" target="_blank" rel="noopener noreferrer">
-                <img className="contact__icon" src="/icons/linkedin.svg" alt="Icône LinkedIn" />
+              <a
+                href="https://linkedin.com/in/alexandrapasco"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__link"
+              >
+                <FaLinkedin 
+                className="contact__icon" 
+                aria-hidden="true"
+                aria-label={t('tooltip.linkedin')}  // accessibilité
+                title={t('tooltip.linkedin')} />
                 <span className="contact__text">{t('contact.contactInfo.linkedin')}</span>
               </a>
             </li>
             <li className="contact__item">
-              <a href="https://github.com/alexandrapasco" target="_blank" rel="noopener noreferrer">
-                <img className="contact__icon" src="/icons/github.svg" alt="Icône GitHub" />
+              <a
+                href="https://github.com/alexandrapasco"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__link"
+              >
+                <FaGithub 
+                className="contact__icon" 
+                aria-hidden="true"
+                aria-label={t('tooltip.github')}  // accessibilité
+                title={t('tooltip.github')} />
                 <span className="contact__text">{t('contact.contactInfo.github')}</span>
               </a>
             </li>
             <li className="contact__item">
-              <a href="https://www.google.com/maps/place/78120+Rambouillet" target="_blank" rel="noopener noreferrer">
-                <img className="contact__icon" src="/icons/map.svg" alt="Icône localisation" />
+              <a
+                href="https://www.google.com/maps/place/78120+Rambouillet"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact__link"
+              >
+                <FaMapMarkerAlt 
+                className="contact__icon" 
+                aria-hidden="true"
+                aria-label={t('tooltip.map')}  // accessibilité
+                title={t('tooltip.map')} />
                 <span className="contact__text">{t('contact.contactInfo.location')}</span>
               </a>
             </li>

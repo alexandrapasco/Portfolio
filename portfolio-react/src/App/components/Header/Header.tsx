@@ -1,6 +1,6 @@
 // src/components/Header/Header.tsx
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './Header.scss';
 import HeaderLogo from '../Header/HeaderLogo/HeaderLogo';
 import HeaderActions from '../Header/HeaderActions/HeaderActions';
@@ -8,21 +8,16 @@ import HeaderNav from '../Header/HeaderNav/HeaderNav';
 import HeaderHome from './HeaderHome/HeaderHome';
 import BurgerMenu from './BurgerMenu/BurgerMenu';
 
-function Header() {
+interface HeaderProps {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+function Header({ isDarkMode, toggleDarkMode }: HeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [isSmall, setIsSmall] = useState(false);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleDarkMode = () => setDarkMode(!darkMode);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  }, [darkMode]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +34,7 @@ function Header() {
       {/* Actions (Langue, DarkMode, Home Desktop) */}
       <aside className="header__actions left">
         <HeaderActions 
-          isDarkMode={darkMode} 
+          isDarkMode={isDarkMode} 
           toggleDarkMode={toggleDarkMode}
         />
         {/* Bouton Home visible seulement sur desktop */}

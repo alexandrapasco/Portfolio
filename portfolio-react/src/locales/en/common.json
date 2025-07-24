@@ -133,6 +133,20 @@
   "text": "Oops! The page you are looking for does not exist...",
   "imageAlt": "404 error illustration",
   "backHome": "Back to home"
+},
+"tooltip": {
+  "mode": "Switch to Dark/Light mode",
+  "modeOn": "Switch to Dark mode",
+  "modeOff": "Switch to Light mode",
+  "langage": "Switch to EN/FR language",
+  "langToEn": "Switch site to English",
+  "langToFr": "Switch site to French",
+  "home": "Back to home",
+  "phone": "Call",
+  "email": "Send an email",
+  "linkedin": "View my LinkedIn profile",
+  "github": "View my GitHub",
+  "map": "Localization"
 }
 }
 
