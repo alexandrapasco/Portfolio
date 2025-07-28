@@ -1,7 +1,7 @@
 [
   {
     "title": "Portfolio",
-    "image": "/images/portfolio.png",
+    "image": "/images/portfolio.webp",
     "description": "Site vitrine présentant mes projets et compétences, c'est ma carte de visite.",
     "technologies": [
       { "name": "React", "icon": "FaReact" },
@@ -11,7 +11,7 @@
   },
   {
     "title": "CinéDélices",
-    "image": "/images/cinedelices.png",
+    "image": "/images/cinedelices.webp",
     "description": "Plateforme de partage de recettes inspirées de divers films & séries, projet collaboratif.",
     "technologies": [
       { "name": "React", "icon": "FaReact" },
@@ -22,7 +22,7 @@
   },
   {
     "title": "Hercule",
-    "image": "/images/hercule.png",
+    "image": "/images/hercule.webp",
     "description": "Projet de formation pour maitriser le mobile-first et responsive.",
     "technologies": [
       { "name": "HTML", "icon": "FaHtml5" },
@@ -31,7 +31,7 @@
   },
   {
     "title": "O'Coffee",
-    "image": "/images/ocoffee.png",
+    "image": "/images/ocoffee.webp",
     "description": "Projet de formation site vitrine pour des commerçants de café.",
     "technologies": [
       { "name": "HTML", "icon": "FaHtml5" },
@@ -40,14 +40,14 @@
   },
   {
     "title": "Bénévolat Sensibilisation Identification",
-    "image": "/images/identification.png",
+    "image": "/images/identification.webp",
     "description": "Post dédié aux réseaux sociaux avec texte et visuel pour l'association l'École des Chats du Pays Houdanais.",
     "links": {
-    "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
-    "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
-    "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
-    "site": "https://ecole-des-chats.netlify.app/"
-  },
+      "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
+      "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
+      "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
+      "site": "https://ecole-des-chats.netlify.app/"
+    },
     "technologies": [
       { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
       { "name": "Canva", "icon": "SiCanva" }
@@ -55,14 +55,14 @@
   },
   {
     "title": "Bénévolat Sensibilisation Stérilisation",
-    "image": "/images/sterilisation.png",
+    "image": "/images/sterilisation.webp",
     "description": "Post dédié aux réseaux sociaux avec texte et visuel pour l'association l'École des Chats du Pays Houdanais.",
     "links": {
-    "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
-    "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
-    "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
-    "site": "https://ecole-des-chats.netlify.app/"
-  },
+      "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
+      "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
+      "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
+      "site": "https://ecole-des-chats.netlify.app/"
+    },
     "technologies": [
       { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
       { "name": "Canva", "icon": "SiCanva" }
@@ -70,7 +70,7 @@
   },
   {
     "title": "Padam Mobility Exercice 1",
-    "image": "/images/padam-mobility1.png",
+    "image": "/images/padam-mobility1.webp",
     "description": "Plan de communication réalisé pour l'entreprise Padam Mobility.",
     "technologies": [
       { "name": "GoogleDrive", "icon": "SiGoogleDrive" }
@@ -78,7 +78,7 @@
   },
   {
     "title": "Padam Mobility Exercice 2",
-    "image": "/images/padam-mobility2.png",
+    "image": "/images/padam-mobility2.webp",
     "description": "Email d'invitation à un évènement avec visuel réalisé pour l'entreprise Padam Mobility.",
     "technologies": [
       { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
@@ -87,7 +87,7 @@
   },
   {
     "title": "Vedecom Exercice",
-    "image": "/images/vedecom.png",
+    "image": "/images/vedecom.webp",
     "description": "Post LinkedIn avec visuel et texte d'un évènement de clôture pour l'entreprise Vedecom.",
     "technologies": [
       { "name": "GoogleDrive", "icon": "SiGoogleDrive" },

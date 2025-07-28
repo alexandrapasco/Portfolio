@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './BurgerMenu.scss';
 
 interface BurgerMenuProps {
   isOpen: boolean;
   toggleMenu: () => void;
+  ariaLabel?: string;
+  ariaExpanded?: boolean;
 }
 
 function BurgerMenu({ isOpen, toggleMenu }: BurgerMenuProps) {
@@ -16,7 +18,10 @@ function BurgerMenu({ isOpen, toggleMenu }: BurgerMenuProps) {
   };
 
   return (
-    <button className={`burger ${isRotated ? 'rotated' : ''}`} onClick={handleClick}>
+    <button 
+    className={`burger ${isRotated ? 'rotated' : ''}`} 
+    onClick={handleClick}
+    aria-label="Ouvrir le menu de navigation">
       {isOpen ? (
         <FaTimes className="icon open" size={30} />
       ) : (

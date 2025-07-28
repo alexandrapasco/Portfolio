@@ -1,4 +1,5 @@
 {
+  "loadingPortfolio": "Chargement du portfolio…",
   "nav": {
     "profile": "Profil",
     "skills": "Compétences",
@@ -7,7 +8,7 @@
   },
   "brand": {
     "title": "Alexandra Pasco",
-    "subtitle": "Développeur Web Full-Stack",
+    "subtitle": "Social Media | Rédaction | Création visuelle",
     "search": "Cherche alternance en contrat de professionnalisation sur 12 mois",
     "degree": "Préparation d'un Bachelor en Communication & Marketing",
     "rhythm": "Rythme : 4 jours en entreprise / 1 jour de formation"
@@ -21,20 +22,20 @@
     "button": "En savoir plus"
   },
   "profile": {
-  "title": "Qui suis-je ?",
-  "subtitle": "Observer, comprendre, créer : ma vision du web.",
-  "tagline": "Un parcours riche, atypique et authentique",
-  "p1": "Je n'ai jamais eu un parcours tout tracé. J'ai exploré différents univers : d'abord photographe et comédienne, puis responsable en restauration. À chaque étape, l'humain a toujours été au cœur des échanges.",
-  "p2": "Ces expériences m’ont permis de faire ressortir mon sens de l’écoute, de l’observation et de l’empathie — des qualités que j’applique aujourd’hui au développement web et à la gestion de communautés en ligne. Ce que j'aime, c'est créer des interfaces belles et accessibles, et concevoir des contenus qui parlent aux gens et les sensibilisent.",
-  "p3a": "C'est en devenant bénévole pour l'association ",
-  "p3b": " que j'ai découvert le community management. J'ai commencé par accueillir des chats traumatisés pour leur redonner confiance, puis on m'a confié la gestion des réseaux sociaux de l'association (",
-  "p3c": "). J’ai adoré imaginer des visuels, écrire des textes optimisés, et surtout voir l’impact de mes publications. Ça m’a donné envie de faire ce métier !",
-  "p4a": "Aujourd’hui diplômée du Titre Professionnel de niveau 5 (Bac+2) \"Développeur Web & Web Mobile\" avec une ",
-  "p4b": ", je poursuis sur cette voie en préparant un ",
-  "p4c": ". Mon objectif ? Développer des stratégies digitales inclusives et percutantes, en restant fidèle à mes valeurs d’authenticité et de partage.",
-  "p5": "Mon regard attentif me pousse à imaginer des solutions inclusives, tandis que ma créativité donne vie à des interfaces fluides et engageantes. Pour moi, le web est un terrain d’expression où technologie et sensibilité se rencontrent.",
-  "p6": "Je recherche donc une alternance pour continuer à apprendre et à évoluer dans ce domaine !"
-},
+    "title": "Qui suis-je ?",
+    "subtitle": "Observer, comprendre, créer : ma vision du web.",
+    "tagline": "Un parcours riche, atypique et authentique",
+    "p1": "Je n'ai jamais eu un parcours tout tracé. J'ai exploré différents univers : d'abord photographe et comédienne, puis responsable en restauration. À chaque étape, l'humain a toujours été au cœur des échanges.",
+    "p2": "Ces expériences m’ont permis de faire ressortir mon sens de l’écoute, de l’observation et de l’empathie — des qualités que j’applique aujourd’hui au développement web et à la gestion de communautés en ligne. Ce que j'aime, c'est créer des interfaces belles et accessibles, et concevoir des contenus qui parlent aux gens et les sensibilisent.",
+    "p3a": "C'est en devenant bénévole pour l'association ",
+    "p3b": " que j'ai découvert le community management. J'ai commencé par accueillir des chats traumatisés pour leur redonner confiance, puis on m'a confié la gestion des réseaux sociaux de l'association (",
+    "p3c": "). J’ai adoré imaginer des visuels, écrire des textes optimisés, et surtout voir l’impact de mes publications. Ça m’a donné envie de faire ce métier !",
+    "p4a": "Aujourd’hui diplômée du Titre Professionnel de niveau 5 (Bac+2) \"Développeur Web & Web Mobile\" avec une ",
+    "p4b": ", je poursuis sur cette voie en préparant un ",
+    "p4c": ". Mon objectif ? Développer des stratégies digitales inclusives et percutantes, en restant fidèle à mes valeurs d’authenticité et de partage.",
+    "p5": "Mon regard attentif me pousse à imaginer des solutions inclusives, tandis que ma créativité donne vie à des interfaces fluides et engageantes. Pour moi, le web est un terrain d’expression où technologie et sensibilité se rencontrent.",
+    "p6": "Je recherche donc une alternance pour continuer à apprendre et à évoluer dans ce domaine !"
+  },
   "skills": {
     "title": "Quels sont mes atouts ?",
     "subtitle": "Mes savoirs et mes pouvoirs pour créer et innover.",
@@ -55,28 +56,28 @@
     }
   },
   "contact": {
-  "title": "Vous souhaitez me contacter ?",
-  "subtitle": "Une question, un projet, une collaboration ? Écrivons la suite ensemble !",
-  "required": "Les champs marqués d’un astérisque (*) sont obligatoires.",
-  "lastname": "Nom",
-  "firstname": "Prénom",
-  "email": "E-mail",
-  "phone": "Téléphone",
-  "subject": "Objet",
-  "message": "Message",
-  "send": "Envoyer",
-  "sending": "Envoi en cours...",
-  "success": "Merci pour votre message ! ✅ Je vous répondrai rapidement.",
-  "error": "❌ Une erreur est survenue, veuillez réessayer.",
-  "network": "❌ Erreur réseau. Veuillez réessayer plus tard.",
-  "contactInfo": {
-    "phone": "06.29.32.08.48",
-    "email": "s.alexandra.pasco@gmail.com",
-    "linkedin": "alexandrapasco",
-    "github": "alexandrapasco",
-    "location": "78120 Rambouillet"
-  }
-},
+    "title": "Vous souhaitez me contacter ?",
+    "subtitle": "Une question, un projet, une collaboration ? Écrivons la suite ensemble !",
+    "required": "Les champs marqués d’un astérisque (*) sont obligatoires.",
+    "lastname": "Nom",
+    "firstname": "Prénom",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "subject": "Objet",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi en cours...",
+    "success": "Merci pour votre message ! ✅ Je vous répondrai rapidement.",
+    "error": "❌ Une erreur est survenue, veuillez réessayer.",
+    "network": "❌ Erreur réseau. Veuillez réessayer plus tard.",
+    "contactInfo": {
+      "phone": "06.29.32.08.48",
+      "email": "s.alexandra.pasco@gmail.com",
+      "linkedin": "alexandrapasco",
+      "github": "alexandrapasco",
+      "location": "78120 Rambouillet"
+    }
+  },
   "projects": {
     "title": "Vous voulez découvrir mes créations ?",
     "subtitle": "Découvrez mes projets, du développement web à la création visuelle !",
@@ -125,29 +126,27 @@
     ]
   },
   "footer": {
-  "copyright": "2024 Alexandra Pasco © Tous droits réservés"
-},
-"error": {
-  "aria": "Page non trouvée",
-  "title": "404 - Page non trouvée",
-  "text": "Oups ! La page que vous cherchez n'existe pas...",
-  "imageAlt": "Illustration d'erreur 404",
-  "backHome": "Retour à l’accueil"
-},
-"tooltip": {
-  "mode": "Passer au mode Sombre/Clair",
-  "modeOn": "Activer le mode sombre",
-  "modeOff": "Désactiver le mode sombre",
-  "langage": "Passer au language EN/FR",
-  "langToEn": "Passer le site en anglais",
-  "langToFr": "Passer le site en français",
-  "home": "Retour à l'accueil",
-  "phone": "Appeler",
-  "email": "Envoyer un e-mail",
-  "linkedin": "Voir mon profil LinkedIn",
-  "github": "Voir mon GitHub",
-  "map": "Localisation"
+    "copyright": "2024 Alexandra Pasco © Tous droits réservés"
+  },
+  "error": {
+    "aria": "Page non trouvée",
+    "title": "404 - Page non trouvée",
+    "text": "Oups ! La page que vous cherchez n'existe pas...",
+    "imageAlt": "Illustration d'erreur 404",
+    "backHome": "Retour à l’accueil"
+  },
+  "tooltip": {
+    "mode": "Passer au mode Sombre/Clair",
+    "modeOn": "Activer le mode sombre",
+    "modeOff": "Désactiver le mode sombre",
+    "langage": "Passer au langage EN/FR",
+    "langToEn": "Passer le site en anglais",
+    "langToFr": "Passer le site en français",
+    "home": "Retour à l'accueil",
+    "phone": "Appeler",
+    "email": "Envoyer un e-mail",
+    "linkedin": "Voir mon profil LinkedIn",
+    "github": "Voir mon GitHub",
+    "map": "Localisation"
+  }
 }
-}
-
-

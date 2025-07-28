@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Error404.scss';
-import errorImage from '../../assets/images/404.png';
+import errorImage from '/images/404.webp';
 
 const Error404 = () => {
   const { t } = useTranslation();

@@ -1,4 +1,5 @@
 import './Profile.scss';
+import PictureProfile from "/images/Picture-Profile.webp";
 import { useTranslation } from 'react-i18next';
 
 function Profile() {
@@ -87,7 +88,7 @@ function Profile() {
         <figure className="profile__profile">
           <img
             className="profile__photo"
-            src="/src/assets/images/Picture-Profile.jpg"
+            src={PictureProfile}
             alt="Alexandra Pasco - Photo de profil"
           />
         </figure>

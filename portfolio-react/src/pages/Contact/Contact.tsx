@@ -132,24 +132,24 @@ function Contact() {
         <aside className="contact__info">
           <ul className="contact__list">
             <li className="contact__item">
-              <a href="tel:0629320848" className="contact__link">
-                <FaPhone 
-                className="contact__icon contact__icon--phone" 
-                aria-hidden="true"
-                aria-label={t('tooltip.phone')}  // accessibilité
-                title={t('tooltip.phone')} 
-                />
+              <a
+                href="tel:0629320848"
+                className="contact__link"
+                title={t('tooltip.phone')}
+                aria-label={t('tooltip.phone')}
+              >
+                <FaPhone className="contact__icon contact__icon--phone" aria-hidden="true" />
                 <span className="contact__text">{t('contact.contactInfo.phone')}</span>
               </a>
             </li>
             <li className="contact__item">
-              <a href="mailto:s.alexandra.pasco@gmail.com" className="contact__link">
-                <FaEnvelope 
-                className="contact__icon" 
-                aria-hidden="true"
-                aria-label={t('tooltip.email')}  // accessibilité
+              <a
+                href="mailto:s.alexandra.pasco@gmail.com"
+                className="contact__link"
                 title={t('tooltip.email')}
-                 />
+                aria-label={t('tooltip.email')}
+              >
+                <FaEnvelope className="contact__icon" aria-hidden="true" />
                 <span className="contact__text">{t('contact.contactInfo.email')}</span>
               </a>
             </li>
@@ -159,12 +159,10 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__link"
+                title={t('tooltip.linkedin')}
+                aria-label={t('tooltip.linkedin')}
               >
-                <FaLinkedin 
-                className="contact__icon" 
-                aria-hidden="true"
-                aria-label={t('tooltip.linkedin')}  // accessibilité
-                title={t('tooltip.linkedin')} />
+                <FaLinkedin className="contact__icon" aria-hidden="true" />
                 <span className="contact__text">{t('contact.contactInfo.linkedin')}</span>
               </a>
             </li>
@@ -174,12 +172,10 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__link"
+                title={t('tooltip.github')}
+                aria-label={t('tooltip.github')}
               >
-                <FaGithub 
-                className="contact__icon" 
-                aria-hidden="true"
-                aria-label={t('tooltip.github')}  // accessibilité
-                title={t('tooltip.github')} />
+                <FaGithub className="contact__icon" aria-hidden="true" />
                 <span className="contact__text">{t('contact.contactInfo.github')}</span>
               </a>
             </li>
@@ -189,12 +185,10 @@ function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="contact__link"
+                title={t('tooltip.map')}
+                aria-label={t('tooltip.map')}
               >
-                <FaMapMarkerAlt 
-                className="contact__icon" 
-                aria-hidden="true"
-                aria-label={t('tooltip.map')}  // accessibilité
-                title={t('tooltip.map')} />
+                <FaMapMarkerAlt className="contact__icon" aria-hidden="true" />
                 <span className="contact__text">{t('contact.contactInfo.location')}</span>
               </a>
             </li>

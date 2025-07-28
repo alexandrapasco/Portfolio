@@ -1,9 +1,15 @@
 import './HeaderLogo.scss';
+import logo from '/images/Logo-AP.webp'; 
 
 function HeaderLogo() {
   return (
     <figure className="header__logo">
-      <img src="/src/assets/images/Logo-AP.png" alt="Logo du site" className="header__logo-img" />
+      <img 
+        src={logo}
+        alt="Logo du site" 
+        className="header__logo-img"
+        loading="lazy"
+      />
     </figure>
   );
 }
