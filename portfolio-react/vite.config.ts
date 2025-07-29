@@ -4,7 +4,7 @@ import { imagetools } from "vite-imagetools";
 import path from "node:path";
 
 export default defineConfig({
-  plugins: [react(), imagetools()], // 👈 plugin image ajouté ici
+  plugins: [react(), imagetools()], 
   css: {
     preprocessorOptions: {
       scss: {

@@ -21,6 +21,7 @@ const Error404 = () => {
         src={errorImage}
         alt={t('error.imageAlt')}
         className="not-found__image"
+        loading="lazy"
       />
       <Link to="/" className="not-found__link">{t('error.backHome')}</Link>
     </main>

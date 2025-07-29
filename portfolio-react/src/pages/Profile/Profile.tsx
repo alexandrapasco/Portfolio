@@ -90,6 +90,7 @@ function Profile() {
             className="profile__photo"
             src={PictureProfile}
             alt="Alexandra Pasco - Photo de profil"
+            loading="lazy"
           />
         </figure>
       </aside>

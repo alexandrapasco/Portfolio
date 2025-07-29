@@ -20,6 +20,17 @@ function Skills(): JSX.Element {
 
   return (
     <section className="skills section-anchor" aria-labelledby="skills">
+      {/* ✅ Ajout image LCP en balise <img /> */}
+      <img
+        src="/images/Fond-Bureau2.webp"
+        alt="Fond de bureau"
+        className="skills__background"
+        width="1920"
+        height="1080"
+        fetchPriority="high"
+        decoding="async"
+      />
+
       <header className="skills__header">
         <h3 className="skills__title" id="skills">{t('skills.title')}</h3>
         <h4 className="skills__subtitle">{t('skills.subtitle')}</h4>

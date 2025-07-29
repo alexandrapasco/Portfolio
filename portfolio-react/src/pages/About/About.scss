@@ -1,20 +1,35 @@
 .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    text-align: justify;
-    margin: auto;
-    gap: 1rem;
-    background-image: url("/images/Fond-Bureau.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+  position: relative; // nécessaire pour positionner l’image en fond
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: justify;
+  margin: auto;
+  gap: 1rem;
+  width: 100%;
+  overflow: hidden; // pour cacher l’image de fond si elle dépasse
 }
 
+// ✅ Nouvelle classe pour l’image de fond
+.about__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; // imite background-size: cover
+  object-position: center; // imite background-position: center
+  z-index: 0;
+  pointer-events: none;
+}
+
+// ✅ contenu au-dessus de l'image de fond
 .about__content {
+  position: relative;
+  z-index: 1;
+
   width: 100%;
   padding: 1.5rem; // ✅ padding plus petit par défaut (mobile)
   box-sizing: border-box; // ✅ pour inclure le padding dans le 100%
@@ -35,8 +50,6 @@
   }
 }
 
-
 .about__text {
-    margin: 1.5rem 0 1.5rem 0;
+  margin: 1.5rem 0 1.5rem 0;
 }
-

@@ -1,18 +1,35 @@
 .skills {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("/images/Fond-Bureau2.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   padding: 1rem;
   width: 100%;
   margin: auto;
 
   @media (min-width: 768px) {
-    padding: 2rem; // ✅ remets 2rem sur tablette
+    padding: 2rem;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__header,
+  &__cards,
+  .button-download-cv {
+    position: relative;
+    z-index: 1;
   }
 
   &__header {
@@ -37,34 +54,33 @@
   }
 
   &__cards {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
+    @media (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: center;
+    }
   }
-}
 
-&__card {
-  display: flex; 
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center; 
-  flex: 1 1 200px; 
-  padding: 1rem;
-  border: 1px solid $beige;
-  border-radius: 30px;
-  background-color: $cream;
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 1 200px;
+    padding: 1rem;
+    border: 1px solid $beige;
+    border-radius: 30px;
+    background-color: $cream;
 
-  @media (min-width: 768px) {
-    width: auto; 
+    @media (min-width: 768px) {
+      width: auto;
+    }
   }
-}
-
 
   &__card-title {
     font-size: 1.4rem;
@@ -100,22 +116,21 @@
 
   &__icons {
     display: grid;
-    grid-template-columns: repeat(1, 1fr); // mobile : 1 par ligne
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     list-style: none;
     padding: 0;
     box-sizing: content-box;
 
     @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr); // dès tablette : 3 colonnes
+      grid-template-columns: repeat(3, 1fr);
     }
 
-   
-  .social-icons svg {
-    width: 20px;
-    height: 20px;
-    margin: 0 4px;
-  }
+    .social-icons svg {
+      width: 20px;
+      height: 20px;
+      margin: 0 4px;
+    }
 
     li {
       display: flex;
@@ -123,7 +138,6 @@
       align-items: center;
       gap: 0.5rem;
     }
-    
 
     img,
     svg {

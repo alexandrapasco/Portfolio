@@ -53,6 +53,19 @@ function Contact() {
 
   return (
     <section className="contact section-anchor" aria-labelledby="contact">
+      {/* ✅ Image de fond accessible */}
+      <img
+        src="/images/Fond-Reunion.webp"
+        alt=""
+        role="presentation"
+        aria-hidden="true"
+        className="contact__background"
+        width="1920"
+        height="1080"
+        loading="lazy"
+        decoding="async"
+      />
+
       <header className="contact__header">
         <h3 className="contact__title" id="contact">{t('contact.title')}</h3>
         <h4 className="contact__subtitle">{t('contact.subtitle')}</h4>

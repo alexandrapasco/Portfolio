@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import 'slick-carousel/slick/slick.css';
@@ -13,6 +13,44 @@ function Projects() {
   const { t } = useTranslation();
   const [autoplay, setAutoplay] = useState(true);
 
+  // ✅ Corrige l'accessibilité : empêche le focus sur les slides masqués
+  useEffect(() => {
+    const updateTabIndexes = () => {
+      const hiddenSlides = document.querySelectorAll('.slick-slide[aria-hidden="true"]');
+      hiddenSlides.forEach((slide) => {
+        const focusables = slide.querySelectorAll('a, button, input, textarea, select');
+        focusables.forEach((el) => {
+          (el as HTMLElement).setAttribute('tabIndex', '-1');
+        });
+      });
+
+      const visibleSlides = document.querySelectorAll('.slick-slide[aria-hidden="false"]');
+      visibleSlides.forEach((slide) => {
+        const focusables = slide.querySelectorAll('a, button, input, textarea, select');
+        focusables.forEach((el) => {
+          (el as HTMLElement).removeAttribute('tabIndex');
+        });
+      });
+    };
+
+    updateTabIndexes();
+
+    // ✅ Surveille les changements dans le carrousel
+    const observer = new MutationObserver(updateTabIndexes);
+    const carousel = document.querySelector('.projects__carousel');
+
+    if (carousel) {
+      observer.observe(carousel, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['aria-hidden'],
+      });
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -23,10 +61,16 @@ function Projects() {
     autoplaySpeed: 3000,
     arrows: true,
     prevArrow: (
-      <button className="projects__arrow slick-prev" aria-label={t('projects.prev')} />
+      <button
+        className="projects__arrow slick-prev"
+        aria-label={t('projects.prev')}
+      />
     ),
     nextArrow: (
-      <button className="projects__arrow slick-next" aria-label={t('projects.next')} />
+      <button
+        className="projects__arrow slick-next"
+        aria-label={t('projects.next')}
+      />
     ),
   };
 
@@ -35,7 +79,9 @@ function Projects() {
   return (
     <section className="projects section-anchor" aria-labelledby="projects">
       <header className="projects__header">
-        <h3 className="projects__title" id="projects">{t('projects.title')}</h3>
+        <h3 className="projects__title" id="projects">
+          {t('projects.title')}
+        </h3>
         <h4 className="projects__subtitle">{t('projects.subtitle')}</h4>
       </header>
 
@@ -43,15 +89,27 @@ function Projects() {
         <Slider {...settings} className="projects__carousel">
           {projectsData.map((project, index) => (
             <article key={index} className="projects__slide">
-              <h5 className="projects__project-title">{t(`projects.items.${index}.title`)}</h5>
+              <h5 className="projects__project-title">
+                {t(`projects.items.${index}.title`)}
+              </h5>
               <figure>
-                <img src={project.image} alt={project.title} className="projects__image" />
-                <figcaption className="projects__description">{t(`projects.items.${index}.description`)}</figcaption>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="projects__image"
+                />
+                <figcaption className="projects__description">
+                  {t(`projects.items.${index}.description`)}
+                </figcaption>
               </figure>
 
               <section className="projects__tech">
                 {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="projects__tech-item" aria-label={tech.name}>
+                  <span
+                    key={idx}
+                    className="projects__tech-item"
+                    aria-label={tech.name}
+                  >
                     {iconMap[tech.icon] ?? null}
                     <p>{tech.name}</p>
                   </span>
@@ -60,14 +118,16 @@ function Projects() {
 
               {project.links && (
                 <section className="projects__links">
-                  <h6 className="projects__social-title">{t('projects.socialTitle')}</h6>
+                  <h6 className="projects__social-title">
+                    {t('projects.socialTitle')}
+                  </h6>
                   <span className="projects__social-icons">
                     {Object.entries(project.links).map(([key, url]) => {
                       const iconKey = {
                         facebook: 'FaFacebook',
                         instagram: 'FaInstagram',
                         linkedin: 'FaLinkedin',
-                        site: null
+                        site: null,
                       }[key];
 
                       return (
@@ -92,10 +152,15 @@ function Projects() {
           ))}
         </Slider>
       </article>
+
       <button
         className="projects__toggle"
         onClick={toggleAutoplay}
-        aria-label={autoplay ? t('projects.stopAutoplay') : t('projects.startAutoplay')}
+        aria-label={
+          autoplay
+            ? t('projects.stopAutoplay')
+            : t('projects.startAutoplay')
+        }
       >
         {autoplay ? <FaPause /> : <FaPlay />}
       </button>
