@@ -69,6 +69,21 @@
     ]
   },
   {
+    "title": "Bénévolat Bannière Facebook",
+    "image": "/images/banniere-fb-asso.webp",
+    "description": "Bannière facebook réalisée pour l'association l'École des Chats du Pays Houdanais.",
+    "links": {
+      "facebook": "https://www.facebook.com/search/top?q=association%20l%27%C3%A9cole%20des%20chats%20du%20pays%20houdanais",
+      "linkedin": "https://www.linkedin.com/company/association-l-%C3%A9cole-des-chats-du-pays-houdanais/",
+      "instagram": "https://www.instagram.com/ecoledeschats/?hl=fr",
+      "site": "https://ecole-des-chats.netlify.app/"
+    },
+    "technologies": [
+      { "name": "Photoshop", "icon": "SiAdobephotoshop" },
+      { "name": "Canva", "icon": "SiCanva" }
+    ]
+  },
+  {
     "title": "Padam Mobility Exercice 1",
     "image": "/images/padam-mobility1.webp",
     "description": "Plan de communication réalisé pour l'entreprise Padam Mobility.",

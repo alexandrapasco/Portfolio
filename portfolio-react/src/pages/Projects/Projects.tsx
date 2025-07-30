@@ -88,7 +88,7 @@ function Projects() {
       <article className="projects__content" aria-live="polite">
         <Slider {...settings} className="projects__carousel">
           {projectsData.map((project, index) => (
-            <article key={index} className="projects__slide">
+            <article key={project.title} className="projects__slide">
               <h5 className="projects__project-title">
                 {t(`projects.items.${index}.title`)}
               </h5>

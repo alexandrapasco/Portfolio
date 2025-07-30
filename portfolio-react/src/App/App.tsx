@@ -28,6 +28,20 @@ export default function App() {
     document.body.classList.toggle("dark-mode", newMode);
   };
 
+  // ✅ Désactive le clic droit
+  useEffect(() => {
+    const handleRightClick = (e: MouseEvent) => {
+      e.preventDefault(); // bloque le menu clic droit
+    };
+
+    document.addEventListener("contextmenu", handleRightClick);
+
+    return () => {
+      document.removeEventListener("contextmenu", handleRightClick);
+    };
+  }, []);
+
+  // Vanta birds effect
   useEffect(() => {
     if (vantaEffect.current) {
       vantaEffect.current.destroy();
@@ -45,9 +59,9 @@ export default function App() {
           minWidth: 1,
           scale: 1.0,
           scaleMobile: 1.0,
-          backgroundColor: isDarkMode ? 0x000000 : 0xFAEBC9,
-          color1: isDarkMode ? 0xFAEBC9 : 0x50513A,
-          color2: isDarkMode ? 0x000000 : 0xCEB184,
+          backgroundColor: isDarkMode ? 0x000000 : 0xfaebc9,
+          color1: isDarkMode ? 0xfaebc9 : 0x50513a,
+          color2: isDarkMode ? 0x000000 : 0xceb184,
           colorMode: "lerpGradient",
           birdSize: 1.1,
           wingSpan: 30.0,

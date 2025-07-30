@@ -7,12 +7,13 @@ import {
   FaCss3Alt,
   FaFacebook,
   FaInstagram,
-  FaLinkedin
+  FaLinkedin,
 } from 'react-icons/fa';
 
 import {
   SiGoogledrive,
-  SiCanva
+  SiCanva,
+  SiAdobephotoshop
 } from 'react-icons/si';
 
 const iconMap: Record<string, JSX.Element> = {
@@ -27,6 +28,7 @@ const iconMap: Record<string, JSX.Element> = {
   FaFacebook: <FaFacebook />,
   FaInstagram: <FaInstagram />,
   FaLinkedin: <FaLinkedin />,
+  SiAdobephotoshop: <SiAdobephotoshop />,
 };
 
 export default iconMap;

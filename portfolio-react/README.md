@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# 🌐 Portfolio - Alexandra Pasco
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenue sur mon portfolio !  
+Je suis **développeuse web** en formation, avec également des compétences en **community management** et **communication digitale**.
 
-Currently, two official plugins are available:
+Ce site a été conçu pour présenter mon travail, mes projets, mes compétences, et mes expériences.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Technologies utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** (framework principal)
+- **Vite** (pour le bundler rapide et léger)
+- **TypeScript**
+- **React Router DOM** (navigation entre les pages)
+- **SASS** (styles personnalisés)
+- **React Slick** (carrousels d’images)
+- **Vanta.js** (animations de fond)
+- **i18next** + **react-i18next** (site multilingue)
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Scripts disponibles
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Tu peux lancer ces commandes dans le terminal à la racine du projet :
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+| Commande | Action |
+|----------|--------|
+| `npm run dev` | Lance le site en mode développement |
+| `npm run build` | Crée la version optimisée du site |
+| `npm run preview` | Prévisualise le build localement |
+| `npm run lint` | Vérifie le code avec ESLint |
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+---
+
+## 🚀 Déploiement
+
+Le site est déployé avec [Vercel](https://vercel.com), une plateforme d’hébergement moderne, gratuite et respectueuse de l’environnement.
+
+---
