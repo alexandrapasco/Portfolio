@@ -108,5 +108,15 @@
       { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
       { "name": "Canva", "icon": "SiCanva" }
     ]
+  },
+  {
+    "title": "IED Exercice",
+    "image": "/images/ied-partenariat.webp",
+    "description": "Post LinkedIn avec visuel et texte d'un partenariat pour l'entreprise IED (Institut d'Économie Durable).",
+    "technologies": [
+      { "name": "GoogleDrive", "icon": "SiGoogleDrive" },
+      { "name": "Canva", "icon": "SiCanva" },
+      { "name": "Photoshop", "icon": "SiAdobephotoshop" }
+    ]
   }
 ]
