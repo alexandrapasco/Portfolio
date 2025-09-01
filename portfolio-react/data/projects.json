@@ -118,5 +118,13 @@
       { "name": "Canva", "icon": "SiCanva" },
       { "name": "Photoshop", "icon": "SiAdobephotoshop" }
     ]
+  },
+  {
+      "title": "École Gustave Exercice",
+      "image": "/images/ecole_gustave-flyer.webp",
+      "description": "Flyer de promotion des métiers du bâtiment, conçu à l'occasion de la Journée internationale des droits des femmes.",
+      "technologies": [
+      { "name": "Canva", "icon": "SiCanva" }
+    ]
   }
 ]
