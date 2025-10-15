@@ -29,17 +29,17 @@ export default function App() {
   };
 
   // ✅ Désactive le clic droit
-  useEffect(() => {
-    const handleRightClick = (e: MouseEvent) => {
-      e.preventDefault(); // bloque le menu clic droit
-    };
+  // useEffect(() => {
+    // const handleRightClick = (e: MouseEvent) => {
+      // e.preventDefault(); // bloque le menu clic droit
+    // };
 
-    document.addEventListener("contextmenu", handleRightClick);
+    // document.addEventListener("contextmenu", handleRightClick);
 
-    return () => {
-      document.removeEventListener("contextmenu", handleRightClick);
-    };
-  }, []);
+    // return () => {
+      // document.removeEventListener("contextmenu", handleRightClick);
+    // };
+ //  }, []);
 
   // Vanta birds effect
   useEffect(() => {
