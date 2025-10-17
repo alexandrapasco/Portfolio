@@ -1,15 +1,18 @@
+import { Link } from 'react-router-dom';
 import './HeaderLogo.scss';
-import logo from '/images/Logo-AP.webp'; 
+import logo from '/images/Logo-AP.webp';
 
 function HeaderLogo() {
   return (
     <figure className="header__logo">
-      <img 
-        src={logo}
-        alt="Logo du site" 
-        className="header__logo-img"
-        loading="lazy"
-      />
+      <Link to="/" title="Accueil">
+        <img 
+          src={logo}
+          alt="Alexandra Pasco – Portfolio" 
+          className="header__logo-img"
+          loading="lazy"
+        />
+      </Link>
     </figure>
   );
 }

@@ -25,16 +25,6 @@ body {
   background: linear-gradient(180deg,rgba(206, 177, 132, 1) 12%, rgba(250, 235, 201, 1) 89%);
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: inherit; /* reprend ton dégradé */
-  filter: blur(20px);
-  transform: scale(1.1); /* évite les bords visibles */
-  z-index: -1; /* reste derrière ton contenu */
-}
-
 /* --------------------------
    Titres
 -------------------------- */
